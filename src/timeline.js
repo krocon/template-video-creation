@@ -1,285 +1,223 @@
-import { createHeaderBadge } from './components/header-badge.js';
-import { createMockMail } from './components/mock-mail.js';
-import { createChecklistCards } from './components/checklist-card.js';
-import { createActionBanner } from './components/action-banner.js';
-import { createOutroCTA } from './components/outro-cta.js';
+/**
+ * GSAP-Master-Timeline „one-minute-lesson“ – beat-synchron zu den Whisper-Cues (src/cues.js).
+ * Registriert wird sie in index.html: window.__timelines["one-minute-lesson"] = window.__buildLessonTimeline();
+ *
+ * HyperFrames-Kontrakt:
+ *  - genau EINE pausierte Timeline auf window.__timelines["one-minute-lesson"]
+ *  - Initialzustände ausschließlich per gsap.set() VOR dem Aufbau der Timeline
+ *  - keine CSS-Transitions, kein repeat:-1, kein Zufall, keine Uhrzeit
+ *
+ * Sprache/Format: --variables '{"lang":"en","format":"16x9"}' (Render)
+ *                 bzw. ?lang=en&format=16x9 (Browser-Preview).
+ */
+window.__buildLessonTimeline = function () {
+  'use strict';
 
-let currentLang = 'de';
-let currentFormat = '9x16';
+  // ---------- Variablen auflösen ----------
+  const qs = new URLSearchParams(window.location.search);
+  const hfVars = Object.assign(
+    {},
+    (window.__hyperframes && typeof window.__hyperframes.getVariables === 'function' && window.__hyperframes.getVariables()) || {},
+    window.__hfVariables || {}
+  );
+  const lang = (qs.get('lang') || hfVars.lang || 'de') === 'en' ? 'en' : 'de';
+  const format = (qs.get('format') || hfVars.format || '9x16') === '16x9' ? '16x9' : '9x16';
 
-export function initComposition(lang = 'de', format = '9x16') {
-  currentLang = lang;
-  currentFormat = format;
+  const DATA = window.__LESSON_CUES.languages[lang];
+  const c = DATA.cues;
+  const TOTAL = DATA.total;
+  const T = window.LESSON_CONTENT[lang];
+  const LC = window.LC;
 
-  const comp = document.getElementById('composition');
-  comp.setAttribute('data-format', format);
-  if (format === '16x9') {
-    comp.setAttribute('data-composition-width', '1920');
-    comp.setAttribute('data-composition-height', '1080');
-  } else {
-    comp.setAttribute('data-composition-width', '1080');
-    comp.setAttribute('data-composition-height', '1920');
-  }
+  // ---------- Root & Audio konfigurieren ----------
+  document.documentElement.lang = lang;
+  const root = document.getElementById('composition');
+  root.setAttribute('data-format', format);
+  root.setAttribute('data-width', format === '16x9' ? '1920' : '1080');
+  root.setAttribute('data-height', format === '16x9' ? '1080' : '1920');
+  root.setAttribute('data-duration', String(TOTAL));
 
-  // Populate Header
-  const headerSlot = document.getElementById('header-slot');
-  headerSlot.innerHTML = '';
-  headerSlot.appendChild(createHeaderBadge({
-    topic: lang === 'de' ? 'IT-SICHERHEIT' : 'IT SECURITY',
-    category: lang === 'de' ? '60S BRIEFING' : '60S BRIEFING'
-  }));
+  const vo = document.getElementById('voiceover');
+  vo.setAttribute('src', DATA.audio);
+  vo.setAttribute('data-duration', String(TOTAL));
 
-  // Populate Scenes
-  const s1Slot = document.getElementById('scene-01-slot');
-  s1Slot.innerHTML = '';
-  s1Slot.appendChild(createMockMail({ lang }));
+  // ---------- Inhalte einsetzen ----------
+  const $ = (id) => document.getElementById(id);
+  $('header-slot').appendChild(LC.createHeaderBadge(T.header));
+  $('hook-greet').textContent = T.hook.greet;
+  $('hook-greet').classList.add('grad');
+  $('hook-question').innerHTML = T.hook.question;
+  $('hook-slot').appendChild(LC.createMockForm(T.hook));
+  $('versions-title').textContent = T.versions.title;
+  $('versions-subtitle').textContent = T.versions.subtitle;
+  $('versions-slot').appendChild(LC.createVersionTrack(T.versions));
+  $('reactive-title').textContent = T.reactive.title;
+  $('reactive-slot').appendChild(LC.createReactiveProblem(T.reactive));
+  $('points-slot').appendChild(LC.createPoints(T.points));
+  $('action-title').textContent = T.action.title;
+  $('action-slot').appendChild(LC.createActionBanner(T.action));
+  $('outro-slot').appendChild(LC.createOutroCTA(T.outro));
 
-  const s2Slot = document.getElementById('scene-02-slot');
-  s2Slot.innerHTML = '';
-  s2Slot.appendChild(createMockMail({ lang }));
+  // ---------- Farben für Zustände ----------
+  const STEP_IDLE = { backgroundColor: 'rgba(255,255,255,0.05)', borderColor: 'rgba(255,255,255,0.1)', color: '#b3acd1' };
+  const STEP_ACTIVE = { backgroundColor: 'rgba(195,92,255,0.24)', borderColor: '#c35cff', color: '#ffffff' };
+  const STEP_DONE = { backgroundColor: 'rgba(62,224,161,0.12)', borderColor: 'rgba(62,224,161,0.6)', color: '#3ee0a1' };
+  const LINE_WARN = { backgroundColor: 'rgba(255,92,122,0.18)', borderLeftColor: '#ff5c7a' };
+  const LINE_OK = { backgroundColor: 'rgba(195,92,255,0.18)', borderLeftColor: '#c35cff' };
 
-  const s3Slot = document.getElementById('scene-03-slot');
-  s3Slot.innerHTML = '';
-  s3Slot.appendChild(createChecklistCards({ lang }));
+  // ---------- Initialzustände (vor der Timeline!) ----------
+  gsap.set('.scene', { autoAlpha: 0 });
+  gsap.set('#scene-hook', { autoAlpha: 1 });
+  gsap.set('#progress-fill', { scaleX: 0 });
+  gsap.set('#brand-logo', { autoAlpha: 0 });
 
-  const s4Slot = document.getElementById('scene-04-slot');
-  s4Slot.innerHTML = '';
-  s4Slot.appendChild(createActionBanner({ lang }));
+  gsap.set('#hook-greet', { autoAlpha: 0, scale: 0.4 });
+  gsap.set('#hook-question', { autoAlpha: 0, y: 40 });
+  gsap.set('#form-mock', { autoAlpha: 0, y: 60 });
+  gsap.set('.sub-chip', { autoAlpha: 0, scale: 0 });
+  gsap.set('#hook-count', { autoAlpha: 0, y: 30 });
 
-  const s5Slot = document.getElementById('scene-05-slot');
-  s5Slot.innerHTML = '';
-  s5Slot.appendChild(createOutroCTA({ lang }));
+  gsap.set('#versions-title', { autoAlpha: 0, scale: 1.15 });
+  gsap.set('#versions-subtitle', { autoAlpha: 0, y: 20 });
+  gsap.set(['#vt-node-1', '#vt-node-2'], { autoAlpha: 0, y: 30 });
+  gsap.set('#vt-line-fill', { scaleX: 0 });
+  gsap.set('#prod-badge', { autoAlpha: 0, scale: 0.6 });
 
-  buildTimeline();
-}
+  gsap.set('#reactive-title', { autoAlpha: 0, y: 20 });
+  gsap.set('#rx-code', { autoAlpha: 0, y: 40 });
+  gsap.set('.code-tag', { autoAlpha: 0, x: 30 });
+  gsap.set('#rx-stamp', { autoAlpha: 0, scale: 1.8 });
+  gsap.set('.bug', { autoAlpha: 0, y: 20 });
 
-function buildTimeline() {
-  const compId = 'one-minute-lesson';
-  window.__timelines = window.__timelines || {};
+  gsap.set('.step', STEP_IDLE);
+  gsap.set('.point-card', { autoAlpha: 0 });
+  gsap.set(['#p1-code-l1', '#p1-code-l2'], { autoAlpha: 0, x: -20 });
+  gsap.set('#p1-inner', { autoAlpha: 0, scale: 0.6 });
+  gsap.set('#p1-outer', { borderColor: 'rgba(195,92,255,0)', backgroundColor: 'rgba(195,92,255,0)' });
+  gsap.set('#p1-outer .wrap-label', { autoAlpha: 0 });
+  gsap.set('#p2-code-l1', { autoAlpha: 0, x: -20 });
+  gsap.set(['#p2-input', '#p2-model'], { autoAlpha: 0, y: 30 });
+  gsap.set('#p2-arrows', { autoAlpha: 0, scale: 0.5 });
+  gsap.set(['#p3-code-l2', '#p3-code-l3', '#p3-code-l4'], { autoAlpha: 0, x: -20 });
+  gsap.set('#p3-input', { autoAlpha: 0 });
+  gsap.set('#p3-msg', { autoAlpha: 0, y: -10 });
+  gsap.set('#p4-nosub', { autoAlpha: 0, scale: 0.7 });
 
-  if (window.__timelines[compId]) {
-    window.__timelines[compId].kill();
-  }
+  gsap.set('#action-title', { autoAlpha: 0, y: 20 });
+  gsap.set('.action-item', { autoAlpha: 0, x: -80 });
+  gsap.set(['#action-import', '#action-model'], { autoAlpha: 0, y: 14 });
 
-  // Pre-set initial states (MANDATORY HyperFrames rule: gsap.set before timeline)
-  gsap.set('.scene-container', { opacity: 0, display: 'none' });
-  gsap.set('#scene-01', { opacity: 1, display: 'flex' });
-  gsap.set('#progress-fill', { width: '0%' });
-  gsap.set('#mail-mockup', { y: 60, opacity: 0, scale: 0.95 });
-  gsap.set('.point-card', { opacity: 0.2, y: 20 });
-  gsap.set('.action-item', { opacity: 0, x: -30 });
-  gsap.set('#outro-punchline', { scale: 0.8, opacity: 0 });
-  gsap.set('#outro-badge', { scale: 0.5, opacity: 0 });
+  gsap.set('#outro-kicker', { autoAlpha: 0, y: 20 });
+  gsap.set(['#outro-line-1', '#outro-line-2'], { autoAlpha: 0, scale: 0.6 });
+  gsap.set('#outro-badge', { autoAlpha: 0, y: 24 });
 
-  // Paused GSAP master timeline
+  // ---------- Timeline ----------
   const tl = gsap.timeline({ paused: true });
+  const cut = (from, to, t) => {
+    tl.set(from, { autoAlpha: 0 }, t);
+    tl.set(to, { autoAlpha: 1 }, t);
+  };
+  const popIn = (sel, t, extra) => tl.to(sel, Object.assign({ autoAlpha: 1, y: 0, x: 0, scale: 1, duration: 0.45, ease: 'power3.out' }, extra), t);
+  const mark = (sel, t, style) => tl.to(sel, Object.assign({ duration: 0.3, ease: 'power1.out' }, style), t);
 
-  // Global Progress Bar (0 to 60 seconds)
-  tl.to('#progress-fill', {
-    width: '100%',
-    duration: 60,
-    ease: 'none'
-  }, 0);
+  // Fortschrittsbalken über die gesamte Länge (legt zugleich die Timeline-Dauer fest)
+  tl.to('#progress-fill', { scaleX: 1, duration: TOTAL, ease: 'none' }, 0);
+  tl.to('#brand-logo', { autoAlpha: 0.8, duration: 0.8, ease: 'power1.out' }, 0.3);   // Logo dezent einblenden
 
-  // --- SCENE 1: Hook (0.0s - 5.2s) ---
-  tl.to('#scene-01 #mail-mockup', {
-    y: 0,
-    opacity: 1,
-    scale: 1,
-    duration: 0.8,
-    ease: 'back.out(1.4)'
-  }, 0.2);
+  // 1 · HOOK ------------------------------------------------------------
+  popIn('#hook-greet', 0.05, { duration: 0.8, ease: 'elastic.out(1, 0.6)' });
+  popIn('#hook-question', c.hook_question);
+  popIn('#form-mock', c.hook_question + 0.25, { duration: 0.6 });
+  const chipSpan = Math.max(0.6, c.hook_fields - c.hook_subs);
+  tl.to('.sub-chip', { autoAlpha: 1, scale: 1, duration: 0.35, ease: 'back.out(2.2)', stagger: chipSpan / 6 }, c.hook_subs);
+  popIn('#hook-count', c.hook_fields + 0.1, { ease: 'back.out(1.6)' });
 
-  tl.to('#scene-01 #cta-fake-btn', {
-    scale: 1.05,
-    repeat: 3,
-    yoyo: true,
-    duration: 0.35,
-    ease: 'power1.inOut'
-  }, 3.0);
+  // 2a · VERSIONEN ------------------------------------------------------
+  cut('#scene-hook', '#scene-versions', c.scene2);
+  popIn('#versions-title', c.scene2, { duration: 0.55 });
+  popIn('#versions-subtitle', c.scene2 + 0.35);
+  popIn('#vt-node-1', c.scene2 + 0.7);
+  const lineStart = c.scene2 + 1.0;
+  tl.to('#vt-line-fill', { scaleX: 1, duration: Math.max(0.3, c.s2_v22 - lineStart), ease: 'power1.inOut' }, lineStart);
+  popIn('#vt-node-2', c.s2_v22, { ease: 'back.out(1.8)' });
+  tl.to('#vt-node-2 .vt-dot', { scale: 1.3, duration: 0.22, yoyo: true, repeat: 1, ease: 'power1.inOut' }, c.s2_stable);
+  popIn('#prod-badge', c.s2_prod, { ease: 'back.out(1.8)' });
 
-  // Transition Scene 1 -> Scene 2 at 5.2s
-  tl.set('#scene-01', { opacity: 0, display: 'none' }, 5.2);
-  tl.set('#scene-02', { opacity: 1, display: 'flex' }, 5.2);
+  // 2b · REACTIVE FORMS -------------------------------------------------
+  cut('#scene-versions', '#scene-reactive', c.scene2b);
+  popIn('#reactive-title', c.scene2b);
+  popIn('#rx-code', c.scene2b + 0.15, { duration: 0.5 });
+  mark(['#rx-code-l1', '#rx-code-l2'], c.s2b_groups, LINE_WARN);
+  popIn('#rx-tag-groups', c.s2b_groups + 0.1);
+  mark('#rx-code-l9', c.s2b_value, LINE_WARN);
+  popIn('#rx-tag-value', c.s2b_value + 0.1);
+  mark('#rx-code-l10', c.s2b_types, LINE_WARN);
+  popIn('#rx-tag-types', c.s2b_types + 0.1);
+  popIn('#rx-stamp', c.s2b_boiler, { duration: 0.4, ease: 'back.out(2)' });
+  tl.to('.bug', { autoAlpha: 1, y: 0, duration: 0.35, ease: 'back.out(2)', stagger: 0.14 }, c.s2b_bugs);
 
-  // --- SCENE 2: Problem (5.2s - 15.0s) ---
-  tl.fromTo('#scene-02 .scene-title', 
-    { scale: 1.2, opacity: 0 }, 
-    { scale: 1, opacity: 1, duration: 0.5, ease: 'power2.out' }, 
-    5.3
-  );
-
-  tl.fromTo('#scene-02 #mail-mockup', 
-    { y: 40, opacity: 0 }, 
-    { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' }, 
-    5.8
-  );
-
-  tl.to('#scene-02 #sender-pill', {
-    backgroundColor: '#ef4444',
-    color: '#ffffff',
-    borderColor: '#ffffff',
-    scale: 1.1,
-    repeat: 3,
-    yoyo: true,
-    duration: 0.4
-  }, 7.5);
-
-  // Transition Scene 2 -> Scene 3 at 15.0s
-  tl.set('#scene-02', { opacity: 0, display: 'none' }, 15.0);
-  tl.set('#scene-03', { opacity: 1, display: 'flex' }, 15.0);
-
-  // --- SCENE 3: The 5 Warning Signs (15.0s - 44.5s) ---
-  // Point 1: Absender (15.1s)
-  tl.to('#point-card-1', {
-    opacity: 1,
-    y: 0,
-    borderColor: '#38bdf8',
-    backgroundColor: 'rgba(30, 41, 59, 0.95)',
-    duration: 0.5,
-    ease: 'power2.out'
-  }, 15.1);
-
-  // Point 2: Anrede & Grammatik (21.0s)
-  tl.to('#point-card-1', { opacity: 0.5, duration: 0.3 }, 20.8);
-  tl.to('#point-card-2', {
-    opacity: 1,
-    y: 0,
-    borderColor: '#38bdf8',
-    backgroundColor: 'rgba(30, 41, 59, 0.95)',
-    duration: 0.5,
-    ease: 'power2.out'
-  }, 21.0);
-
-  // Point 3: Künstlicher Zeitdruck (26.7s)
-  tl.to('#point-card-2', { opacity: 0.5, duration: 0.3 }, 26.5);
-  tl.to('#point-card-3', {
-    opacity: 1,
-    y: 0,
-    borderColor: '#f59e0b',
-    backgroundColor: 'rgba(30, 41, 59, 0.95)',
-    duration: 0.5,
-    ease: 'power2.out'
-  }, 26.7);
-
-  // Point 4: Passwort & PIN (32.4s)
-  tl.to('#point-card-3', { opacity: 0.5, duration: 0.3 }, 32.2);
-  tl.to('#point-card-4', {
-    opacity: 1,
-    y: 0,
-    borderColor: '#ef4444',
-    backgroundColor: 'rgba(30, 41, 59, 0.95)',
-    duration: 0.5,
-    ease: 'power2.out'
-  }, 32.4);
-
-  // Point 5: Links & Anhänge (38.2s)
-  tl.to('#point-card-4', { opacity: 0.5, duration: 0.3 }, 38.0);
-  tl.to('#point-card-5', {
-    opacity: 1,
-    y: 0,
-    borderColor: '#ef4444',
-    backgroundColor: 'rgba(30, 41, 59, 0.95)',
-    duration: 0.5,
-    ease: 'power2.out'
-  }, 38.2);
-
-  // Transition Scene 3 -> Scene 4 at 44.5s
-  tl.set('#scene-03', { opacity: 0, display: 'none' }, 44.5);
-  tl.set('#scene-04', { opacity: 1, display: 'flex' }, 44.5);
-
-  // --- SCENE 4: Action (44.5s - 54.5s) ---
-  tl.to('#action-item-1', {
-    opacity: 1,
-    x: 0,
-    duration: 0.5,
-    ease: 'back.out(1.2)'
-  }, 45.0);
-
-  tl.to('#action-item-2', {
-    opacity: 1,
-    x: 0,
-    duration: 0.5,
-    ease: 'back.out(1.2)'
-  }, 48.5);
-
-  tl.to('#action-item-3', {
-    opacity: 1,
-    x: 0,
-    duration: 0.5,
-    ease: 'back.out(1.2)'
-  }, 51.5);
-
-  // Transition Scene 4 -> Scene 5 at 54.5s
-  tl.set('#scene-04', { opacity: 0, display: 'none' }, 54.5);
-  tl.set('#scene-05', { opacity: 1, display: 'flex' }, 54.5);
-
-  // --- SCENE 5: Outro & Takeaway (54.5s - 60.0s) ---
-  tl.to('#outro-punchline', {
-    opacity: 1,
-    scale: 1,
-    duration: 0.7,
-    ease: 'elastic.out(1, 0.6)'
-  }, 55.0);
-
-  tl.to('#outro-badge', {
-    opacity: 1,
-    scale: 1,
-    duration: 0.6,
-    ease: 'back.out(1.4)'
-  }, 56.8);
-
-  window.__timelines[compId] = tl;
-  return tl;
-}
-
-// Interactive Preview Controls
-document.addEventListener('DOMContentLoaded', () => {
-  initComposition(currentLang, currentFormat);
-
-  const btnPlay = document.getElementById('btn-play');
-  const btnToggleLang = document.getElementById('btn-toggle-lang');
-  const btnToggleFormat = document.getElementById('btn-toggle-format');
-  const timeDisplay = document.getElementById('time-display');
-
-  if (btnPlay) {
-    btnPlay.addEventListener('click', () => {
-      const tl = window.__timelines['one-minute-lesson'];
-      if (!tl) return;
-      if (tl.paused()) {
-        tl.play();
-        btnPlay.innerText = 'Pause';
-      } else {
-        tl.pause();
-        btnPlay.innerText = 'Play';
-      }
-    });
-  }
-
-  if (btnToggleLang) {
-    btnToggleLang.addEventListener('click', () => {
-      currentLang = currentLang === 'de' ? 'en' : 'de';
-      initComposition(currentLang, currentFormat);
-      btnToggleLang.innerText = currentLang.toUpperCase();
-    });
-  }
-
-  if (btnToggleFormat) {
-    btnToggleFormat.addEventListener('click', () => {
-      currentFormat = currentFormat === '9x16' ? '16x9' : '9x16';
-      initComposition(currentLang, currentFormat);
-      btnToggleFormat.innerText = currentFormat;
-    });
-  }
-
-  // Update timer display
-  gsap.ticker.add(() => {
-    const tl = window.__timelines ? window.__timelines['one-minute-lesson'] : null;
-    if (tl && timeDisplay) {
-      const cur = tl.time();
-      const min = Math.floor(cur / 60).toString().padStart(2, '0');
-      const sec = Math.floor(cur % 60).toString().padStart(2, '0');
-      timeDisplay.innerText = `${min}:${sec}`;
+  // 3 · KERNPUNKTE ------------------------------------------------------
+  cut('#scene-reactive', '#scene-points', c.p1);
+  const points = [c.p1, c.p2, c.p3, c.p4];
+  points.forEach((t, i) => {
+    const n = i + 1;
+    if (n > 1) {
+      tl.set(`#point-card-${n - 1}`, { autoAlpha: 0 }, t);
+      mark(`#step-${n - 1}`, t, STEP_DONE);
     }
+    tl.set(`#point-card-${n}`, { autoAlpha: 1 }, t);
+    mark(`#step-${n}`, t, STEP_ACTIVE);
+    tl.from(`#point-card-${n} .point-head`, { y: 24, duration: 0.4, ease: 'power3.out', immediateRender: false }, t);
   });
-});
+
+  // 01 Modell zuerst: signal() erscheint, dann legt sich form() darum
+  popIn('#p1-code-l1', c.p1_signal);
+  popIn('#p1-inner', c.p1_signal + 0.05, { ease: 'back.out(1.8)' });
+  popIn('#p1-code-l2', c.p1_form);
+  mark('#p1-outer', c.p1_form + 0.05, { borderColor: 'rgba(195,92,255,1)', backgroundColor: 'rgba(195,92,255,0.08)', duration: 0.45 });
+  popIn('#p1-outer .wrap-label', c.p1_form + 0.2);
+
+  // 02 Binden mit formField: Input ⇄ Modell
+  popIn('#p2-code-l1', c.p2_field);
+  popIn('#p2-input', c.p2_input);
+  popIn('#p2-model', c.p2_input + 0.4);
+  popIn('#p2-arrows', c.p2_sync, { ease: 'back.out(2)' });
+  mark(['#p2-input', '#p2-model'], c.p2_sync, { borderColor: '#3ee0a1' });
+
+  // 03 Validierung im Schema: Regeln Zeile für Zeile, dann die Fehlermeldung
+  popIn('#p3-code-l2', c.p3_required);
+  popIn('#p3-code-l3', c.p3_email);
+  popIn('#p3-code-l4', c.p3_min);
+  popIn('#p3-input', c.p3_required + 0.3);
+  popIn('#p3-msg', c.p3_message, { ease: 'back.out(1.8)' });
+
+  // 04 Alles ist ein Signal: Status-Pills + passende Template-Zeilen
+  const PILL_ON = { backgroundColor: 'rgba(195,92,255,0.28)', borderColor: '#c35cff', color: '#ffffff' };
+  [[c.p4_valid, 1, 'l1'], [c.p4_touched, 2, 'l2'], [c.p4_errors, 3, 'l3']].forEach(([t, n, line]) => {
+    mark(`#p4-pill-${n}`, t, PILL_ON);
+    tl.from(`#p4-pill-${n}`, { scale: 1.18, duration: 0.3, ease: 'power2.out', immediateRender: false }, t);
+    mark(`#p4-code-${line}`, t, LINE_OK);
+  });
+  popIn('#p4-nosub', c.p4_nosub, { ease: 'back.out(2)' });
+
+  // 4 · HANDLUNG --------------------------------------------------------
+  cut('#scene-points', '#scene-action', c.scene4);
+  popIn('#action-title', c.scene4);
+  popIn('#action-item-1', c.a_pick, { ease: 'back.out(1.2)', duration: 0.5 });
+  popIn('#action-item-2', c.a_import, { ease: 'back.out(1.2)', duration: 0.5 });
+  popIn('#action-import', c.a_import + 0.25);
+  popIn('#action-model', c.a_model);
+  popIn('#action-item-3', c.a_migrate, { ease: 'back.out(1.2)', duration: 0.5 });
+  const migStart = c.a_migrate + 0.5;
+  const migSpan = Math.max(0.8, c.scene5 - 0.2 - migStart);
+  tl.to('.mig-seg', { backgroundColor: '#3ee0a1', duration: 0.25, stagger: migSpan / 4 }, migStart);
+
+  // 5 · OUTRO -----------------------------------------------------------
+  cut('#scene-action', '#scene-outro', c.scene5);
+  popIn('#outro-kicker', c.scene5);
+  popIn('#outro-line-1', Math.max(c.scene5 + 0.15, c.o_signal - 0.4), { duration: 0.9, ease: 'elastic.out(1, 0.55)' });
+  popIn('#outro-line-2', c.o_form - 0.25, { duration: 0.9, ease: 'elastic.out(1, 0.55)' });
+  popIn('#outro-badge', Math.min(c.o_form + 0.4, TOTAL - 0.5));
+
+  return tl;
+};
