@@ -1,91 +1,73 @@
 /**
- * Checklist Cards Component (The 5 Warning Signs)
+ * Kernpunkte: Stepper (01–04) + je Punkt eine Karte mit Code und einer kleinen Erklär-Visualisierung.
  */
-export function createChecklistCards({ lang = 'de' } = {}) {
-  const isDe = lang === 'de';
+(function () {
+  const LC = (window.LC = window.LC || {});
 
-  const points = isDe ? [
-    {
-      num: '01',
-      icon: '🔍',
-      title: 'Der Absender',
-      desc: 'Maus drüberhalten ohne Klick – oft steht eine fremde Fake-Domain dahinter.'
-    },
-    {
-      num: '02',
-      icon: '✍️',
-      title: 'Allgemeine Anrede',
-      desc: '„Sehr geehrter Kunde“ statt deines Namens, garniert mit Rechtschreibfehlern.'
-    },
-    {
-      num: '03',
-      icon: '⏳',
-      title: 'Künstlicher Zeitdruck',
-      desc: '„Konto sperrt in 2 Stunden!“ Panikmache soll unüberlegtes Klicken erzwingen.'
-    },
-    {
-      num: '04',
-      icon: '🔒',
-      title: 'Passwort & TAN-Abfrage',
-      desc: 'Banken fragen niemals PINs, Passwörter oder TANs per E-Mail ab!'
-    },
-    {
-      num: '05',
-      icon: '📎',
-      title: 'Gefährliche Links & Anhänge',
-      desc: 'Vorausgefüllte Login-Seiten oder getarnte Anhänge (.zip, .exe).'
-    }
-  ] : [
-    {
-      num: '01',
-      icon: '🔍',
-      title: 'Sender Address',
-      desc: 'Hover without clicking – inspect the actual domain behind the display name.'
-    },
-    {
-      num: '02',
-      icon: '✍️',
-      title: 'Generic Greeting',
-      desc: '“Dear Customer” instead of your name, combined with poor grammar.'
-    },
-    {
-      num: '03',
-      icon: '⏳',
-      title: 'Artificial Urgency',
-      desc: '“Locked in 2 hours!” Panic is designed to rush you into making a mistake.'
-    },
-    {
-      num: '04',
-      icon: '🔒',
-      title: 'PIN & Password Requests',
-      desc: 'Legitimate institutions will never ask for credentials via email.'
-    },
-    {
-      num: '05',
-      icon: '📎',
-      title: 'Deceptive Links & Files',
-      desc: 'Fake login destinations or dangerous attachments (.zip, .exe).'
-    }
+  const CODE = (t) => [
+    ["model = signal({ email: '', age: 18 });", 'loginForm = form(this.model);'],
+    ['<input [formField]="loginForm.email" />'],
+    [
+      'loginForm = form(this.model, (s) => {',
+      `  required(s.email, { message: '${t.requiredMsg}' });`,
+      '  email(s.email);',
+      '  min(s.age, 18);',
+      '});',
+    ],
+    [
+      '<button [disabled]="!loginForm().valid()">',
+      '@if (loginForm.email().touched()) {',
+      '  {{ loginForm.email().errors()[0]?.message }}',
+      '}',
+    ],
   ];
 
-  const container = document.createElement('div');
-  container.className = 'points-list';
-  container.id = 'points-list';
+  const VIZ = (t) => [
+    `<div class="wrap-viz">
+       <div class="wrap-outer" id="p1-outer"><span class="wrap-label">${t.wrapOuter}</span>
+         <div class="wrap-inner" id="p1-inner">${t.wrapInner}</div>
+       </div>
+     </div>`,
+    `<div class="sync-viz">
+       <div class="sync-box" id="p2-input"><span class="sync-cap">&lt;input&gt;</span><span class="sync-val">${t.inputValue}</span></div>
+       <div class="sync-arrows" id="p2-arrows"><span>→</span><span>←</span></div>
+       <div class="sync-box model" id="p2-model"><span class="sync-cap">model</span><span class="sync-val mono">email: '${t.inputValue}'</span></div>
+     </div>`,
+    `<div class="err-viz">
+       <div class="err-input" id="p3-input"></div>
+       <div class="err-bubble" id="p3-msg">⚠ ${t.requiredMsg}</div>
+     </div>`,
+    `<div class="pill-viz">
+       <span class="state-pill" id="p4-pill-1">valid()</span>
+       <span class="state-pill" id="p4-pill-2">touched()</span>
+       <span class="state-pill" id="p4-pill-3">errors()</span>
+       <span class="nosub" id="p4-nosub">${t.noSubscribe} <s>.subscribe()</s></span>
+     </div>`,
+  ];
 
-  points.forEach((p, idx) => {
-    const card = document.createElement('div');
-    card.className = 'point-card';
-    card.id = `point-card-${idx + 1}`;
-    card.innerHTML = `
-      <div class="point-number">${p.num}</div>
-      <div class="point-content">
-        <div class="point-headline">${p.title}</div>
-        <div class="point-desc">${p.desc}</div>
-      </div>
-      <div class="point-icon">${p.icon}</div>
-    `;
-    container.appendChild(card);
-  });
-
-  return container;
-}
+  LC.createPoints = function (t) {
+    const wrap = document.createElement('div');
+    wrap.className = 'points-stage';
+    wrap.innerHTML = `<div class="stepper">${t.steps
+      .map((s, i) => `<div class="step" id="step-${i + 1}"><b>0${i + 1}</b><span>${s}</span></div>`)
+      .join('')}</div><div class="point-deck" id="point-deck"></div>`;
+    const deck = wrap.querySelector('.point-deck');
+    const code = CODE(t);
+    const viz = VIZ(t);
+    t.items.forEach((item, i) => {
+      const n = i + 1;
+      const card = document.createElement('div');
+      card.className = 'point-card glass-card';
+      card.id = `point-card-${n}`;
+      card.innerHTML = `
+        <div class="point-head">
+          <span class="point-num">0${n}</span>
+          <div><div class="point-title">${item.title}</div><div class="point-note">${item.note}</div></div>
+        </div>`;
+      card.appendChild(LC.createCodeEditor({ id: `p${n}-code`, file: n === 2 || n === 4 ? 'login.component.html' : 'login.component.ts', lines: code[i], compact: true }));
+      card.insertAdjacentHTML('beforeend', viz[i]);
+      deck.appendChild(card);
+    });
+    return wrap;
+  };
+})();

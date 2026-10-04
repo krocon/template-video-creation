@@ -1,66 +1,28 @@
 /**
- * Action Banner Component (What to do when receiving suspicious emails)
+ * Handlungs-Szene: drei Schritte, die nacheinander hereinsliden.
  */
-export function createActionBanner({ lang = 'de' } = {}) {
-  const isDe = lang === 'de';
-
-  const items = isDe ? [
-    {
-      type: 'danger',
-      icon: '🛑',
-      title: 'Nicht klicken & nicht antworten',
-      desc: 'Keine Anhänge öffnen, keine Links betätigen.'
-    },
-    {
-      type: 'success',
-      icon: '📞',
-      title: 'Absender separat kontaktieren',
-      desc: 'Nutze bekannte Telefonnummern oder offizielle Websites.'
-    },
-    {
-      type: 'success',
-      icon: '🛡️',
-      title: 'IT-Sicherheit / Kollegium warnen',
-      desc: 'Mail als Phishing melden, um andere zu schützen.'
-    }
-  ] : [
-    {
-      type: 'danger',
-      icon: '🛑',
-      title: 'Do not click & do not reply',
-      desc: 'Never open unexpected attachments or links.'
-    },
-    {
-      type: 'success',
-      icon: '📞',
-      title: 'Verify via trusted official channel',
-      desc: 'Call their official phone number directly.'
-    },
-    {
-      type: 'success',
-      icon: '🛡️',
-      title: 'Report to IT Security',
-      desc: 'Forward to your internal security team to block it.'
-    }
-  ];
-
-  const grid = document.createElement('div');
-  grid.className = 'action-grid';
-  grid.id = 'action-grid';
-
-  items.forEach((item, idx) => {
-    const el = document.createElement('div');
-    el.className = 'action-item';
-    el.id = `action-item-${idx + 1}`;
-    el.innerHTML = `
-      <div class="action-icon-circle ${item.type}">${item.icon}</div>
-      <div class="action-text">
-        <h4>${item.title}</h4>
-        <p>${item.desc}</p>
-      </div>
-    `;
-    grid.appendChild(el);
-  });
-
-  return grid;
-}
+(function () {
+  const LC = (window.LC = window.LC || {});
+  LC.createActionBanner = function (t) {
+    const grid = document.createElement('div');
+    grid.className = 'action-grid';
+    grid.innerHTML = t.items
+      .map((it, i) => {
+        const n = i + 1;
+        let extra = '';
+        if (n === 2) {
+          extra = `<div class="import-chip mono" id="action-import">${LC.highlight("import { form } from '@angular/forms/signals';")}</div>
+                   <div class="model-chip" id="action-model">+ ${t.modelChip}</div>`;
+        }
+        if (n === 3) {
+          extra = `<div class="migrate-bar">${[1, 2, 3, 4].map((k) => `<span class="mig-seg" id="mig-seg-${k}"></span>`).join('')}</div>`;
+        }
+        return `<div class="action-item glass-card" id="action-item-${n}">
+          <div class="action-num">${it.num}</div>
+          <div class="action-text"><h4>${it.title}</h4>${it.desc ? `<p>${it.desc}</p>` : ''}${extra}</div>
+        </div>`;
+      })
+      .join('');
+    return grid;
+  };
+})();

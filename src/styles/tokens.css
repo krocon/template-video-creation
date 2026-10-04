@@ -1,40 +1,47 @@
 :root {
-  /* Color Palette - Cyber Security Dark */
-  --bg-dark: #0a0e17;
-  --bg-gradient: radial-gradient(circle at 50% 20%, #151d30 0%, #0a0e17 80%);
-  --surface-card: rgba(21, 29, 48, 0.88);
-  --surface-glass: rgba(255, 255, 255, 0.05);
+  /* Farbwelt „Signal Dark“ – Angular-nahe Rot→Violett-Akzente auf tiefem Indigo */
+  --bg-dark: #0c0a17;
+  --bg-gradient: radial-gradient(circle at 50% 18%, #221838 0%, #0c0a17 72%);
+  --surface-card: rgba(26, 21, 46, 0.92);
+  --surface-code: #120f22;
   --border-subtle: rgba(255, 255, 255, 0.12);
-  --border-glow: rgba(56, 189, 248, 0.4);
+  --border-glow: rgba(195, 92, 255, 0.55);
 
-  /* Accents */
-  --color-primary: #38bdf8;
-  --color-primary-glow: rgba(56, 189, 248, 0.35);
-  --color-danger: #f43f5e;
-  --color-danger-glow: rgba(244, 63, 94, 0.4);
-  --color-warning: #fbbf24;
-  --color-success: #10b981;
+  --color-red: #ff4f81;
+  --color-violet: #c35cff;
+  --color-indigo: #7c6cff;
+  --grad-signal: linear-gradient(90deg, #ff4f81 0%, #c35cff 55%, #8f7bff 100%);
+  --color-primary: #d4b8ff;          /* helles Violett für Text-Akzente (Kontrast > 9:1) */
+  --color-primary-glow: rgba(195, 92, 255, 0.35);
+  --color-danger: #ff5c7a;
+  --color-danger-soft: #ffa3b5;
+  --color-danger-glow: rgba(255, 92, 122, 0.35);
+  --color-warning: #ffc857;
+  --color-success: #3ee0a1;
 
-  /* Typography */
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --text-inverse: #0a0e17;
+  /* Syntax-Farben */
+  --tk-kw: #ff7ab6;
+  --tk-fn: #8fc1ff;
+  --tk-str: #a6f0b8;
+  --tk-num: #ffc857;
+  --tk-attr: #f0a6ff;
+  --tk-tag: #ff9e7a;
+  --tk-id: #ece8ff;
+  --tk-pu: #a9a3c7;
+
+  --text-main: #f6f4ff;
+  --text-muted: #b3acd1;             /* Kontrast auf --bg-dark ≈ 9:1 */
   --font-sans: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 
-  /* Easing */
-  --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
-  --ease-smooth: cubic-bezier(0.2, 0.8, 0.2, 1);
-
-  /* Dimensions (Default 9:16) */
+  /* Abmessungen (Standard 9:16) */
   --comp-width: 1080px;
   --comp-height: 1920px;
   --safe-padding: 72px;
 }
 
-/* 16:9 Mode override */
 [data-format="16x9"] {
   --comp-width: 1920px;
   --comp-height: 1080px;
-  --safe-padding: 80px;
+  --safe-padding: 64px;
 }

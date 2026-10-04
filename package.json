@@ -10,14 +10,17 @@
     "check": "npx -y hyperframes check",
     "lint": "npx -y hyperframes lint",
     "snapshot": "npx -y hyperframes snapshot",
-    "pipeline:audio": "node scripts/pipeline_audio.js",
+    "pipeline:audio": "bash scripts/run_audio.sh",
+    "cues": "node scripts/build_cues.js",
     "render": "node scripts/render_pipeline.js",
     "build": "node scripts/build_all.js",
     "doctor": "npx -y hyperframes doctor",
     "setup": "npm run setup:whisper && npm run setup:browser",
     "setup:whisper": "python3 -m pip install -U openai-whisper",
     "setup:browser": "npx -y hyperframes browser ensure",
-    "setup:check": "bash scripts/setup_check.sh"
+    "setup:check": "bash scripts/setup_check.sh",
+    "export": "bash scripts/export_all.sh",
+    "verify": "python3 scripts/verify_export.py"
   },
   "keywords": [
     "motion-graphics",

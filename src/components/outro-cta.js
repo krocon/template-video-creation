@@ -1,28 +1,18 @@
 /**
- * Outro CTA Component (Takeaway & Final Merksatz)
+ * Outro: Merksatz mit elastischem Einstieg + Themen-Badge.
  */
-export function createOutroCTA({ lang = 'de' } = {}) {
-  const isDe = lang === 'de';
-
-  const strings = {
-    title: isDe ? 'Merke dir:' : 'Key Takeaway:',
-    punchline: isDe ? 'Kurz prüfen,<br>nicht anbeißen!' : 'Pause before you click,<br>don’t take the bait!',
-    badge: isDe ? '🛡️ IT-Sicherheit meistert man gemeinsam' : '🛡️ Cybersecurity is teamwork'
+(function () {
+  const LC = (window.LC = window.LC || {});
+  LC.createOutroCTA = function (t) {
+    const wrap = document.createElement('div');
+    wrap.className = 'outro-wrap';
+    wrap.innerHTML = `
+      <div class="outro-kicker" id="outro-kicker">${t.kicker}</div>
+      <div class="outro-punchline">
+        <span class="outro-line" id="outro-line-1">${t.line1}</span>
+        <span class="outro-line grad" id="outro-line-2">${t.line2}</span>
+      </div>
+      <div class="outro-badge" id="outro-badge">${t.badge}</div>`;
+    return wrap;
   };
-
-  const wrap = document.createElement('div');
-  wrap.style.textAlign = 'center';
-  wrap.id = 'outro-wrap';
-  wrap.innerHTML = `
-    <div style="font-size: 28px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-primary); margin-bottom: 24px; font-weight: 700;">
-      ${strings.title}
-    </div>
-    <div class="outro-punchline" id="outro-punchline">
-      ${strings.punchline}
-    </div>
-    <div class="outro-badge" id="outro-badge">
-      ${strings.badge}
-    </div>
-  `;
-  return wrap;
-}
+})();

@@ -1,0 +1,9 @@
+Hallo zusammen! Dein Formular hat mehr Subscriptions als Eingabefelder?
+Zeit für Signal Forms. Seit Angular 22 sind sie stabil und produktionsreif.
+Reactive Forms heißt oft: FormGroups verschachteln, valueChanges abonnieren, Typen von Hand nachziehen. Viel Boilerplate, und jede Subscription ist eine neue Fehlerquelle.
+Erstens: Das Modell zuerst. Deine Daten liegen in einem normalen Signal, und die Funktion form legt das Formular darum.
+Zweitens: Binden mit formField. Ein Attribut am Input, und Wert und Status bleiben synchron, in beide Richtungen.
+Drittens: Validierung im Schema. Required, email oder min schreibst du direkt dazu, inklusive eigener Fehlermeldung.
+Viertens: Alles ist ein Signal. Valid, touched und errors liest du direkt im Template, ohne subscribe.
+Und jetzt? Nimm dir dein nächstes Formular vor, importiere aus angular forms signals und starte mit einem Signal-Modell. Bestehende Reactive Forms migrierst du danach Schritt für Schritt.
+Also: Erst das Signal, dann das Formular!

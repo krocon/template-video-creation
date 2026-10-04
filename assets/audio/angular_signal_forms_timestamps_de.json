@@ -1,0 +1,907 @@
+{
+  "audio_file": "assets/audio/angular_signal_forms_vo_de_fast.mp3",
+  "language": "de",
+  "duration": 63.56,
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 0.72,
+      "text": "Hallo zusammen!",
+      "words": [
+        {
+          "word": "Hallo",
+          "start": 0.0,
+          "end": 0.28
+        },
+        {
+          "word": "zusammen!",
+          "start": 0.28,
+          "end": 0.72
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "start": 1.28,
+      "end": 4.0,
+      "text": "Dein Formular hat mehr Subscriptions als Eingabefelder?",
+      "words": [
+        {
+          "word": "Dein",
+          "start": 1.28,
+          "end": 1.44
+        },
+        {
+          "word": "Formular",
+          "start": 1.44,
+          "end": 1.84
+        },
+        {
+          "word": "hat",
+          "start": 1.84,
+          "end": 2.1
+        },
+        {
+          "word": "mehr",
+          "start": 2.1,
+          "end": 2.28
+        },
+        {
+          "word": "Subscriptions",
+          "start": 2.28,
+          "end": 2.84
+        },
+        {
+          "word": "als",
+          "start": 2.84,
+          "end": 3.26
+        },
+        {
+          "word": "Eingabefelder?",
+          "start": 3.26,
+          "end": 4.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "start": 4.48,
+      "end": 5.66,
+      "text": "Zeit für Signalforms.",
+      "words": [
+        {
+          "word": "Zeit",
+          "start": 4.48,
+          "end": 4.62
+        },
+        {
+          "word": "für",
+          "start": 4.62,
+          "end": 4.82
+        },
+        {
+          "word": "Signalforms.",
+          "start": 4.82,
+          "end": 5.66
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "start": 6.02,
+      "end": 9.56,
+      "text": "Seit Angular 22 sind sie stabil und Produktionsreif.",
+      "words": [
+        {
+          "word": "Seit",
+          "start": 6.02,
+          "end": 6.3
+        },
+        {
+          "word": "Angular",
+          "start": 6.3,
+          "end": 6.56
+        },
+        {
+          "word": "22",
+          "start": 6.56,
+          "end": 7.18
+        },
+        {
+          "word": "sind",
+          "start": 7.18,
+          "end": 7.86
+        },
+        {
+          "word": "sie",
+          "start": 7.86,
+          "end": 8.04
+        },
+        {
+          "word": "stabil",
+          "start": 8.04,
+          "end": 8.38
+        },
+        {
+          "word": "und",
+          "start": 8.38,
+          "end": 8.6
+        },
+        {
+          "word": "Produktionsreif.",
+          "start": 8.6,
+          "end": 9.56
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "start": 9.98,
+      "end": 12.8,
+      "text": "Reactive Forms heißt oft, Form-Grupps verschachteln.",
+      "words": [
+        {
+          "word": "Reactive",
+          "start": 9.98,
+          "end": 10.3
+        },
+        {
+          "word": "Forms",
+          "start": 10.3,
+          "end": 10.78
+        },
+        {
+          "word": "heißt",
+          "start": 10.78,
+          "end": 10.88
+        },
+        {
+          "word": "oft,",
+          "start": 10.88,
+          "end": 11.26
+        },
+        {
+          "word": "Form",
+          "start": 11.76,
+          "end": 11.92
+        },
+        {
+          "word": "-Grupps",
+          "start": 11.92,
+          "end": 12.24
+        },
+        {
+          "word": "verschachteln.",
+          "start": 12.24,
+          "end": 12.8
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "start": 13.32,
+      "end": 16.1,
+      "text": "Value-Changes abonnieren, Typen von Hand nachziehen.",
+      "words": [
+        {
+          "word": "Value",
+          "start": 13.32,
+          "end": 13.48
+        },
+        {
+          "word": "-Changes",
+          "start": 13.48,
+          "end": 13.84
+        },
+        {
+          "word": "abonnieren,",
+          "start": 13.84,
+          "end": 14.4
+        },
+        {
+          "word": "Typen",
+          "start": 14.92,
+          "end": 15.2
+        },
+        {
+          "word": "von",
+          "start": 15.2,
+          "end": 15.36
+        },
+        {
+          "word": "Hand",
+          "start": 15.36,
+          "end": 15.56
+        },
+        {
+          "word": "nachziehen.",
+          "start": 15.56,
+          "end": 16.1
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "start": 16.6,
+      "end": 19.84,
+      "text": "Viel Boilerplate und jedes Subscription ist eine neue Fehlerquelle.",
+      "words": [
+        {
+          "word": "Viel",
+          "start": 16.6,
+          "end": 16.72
+        },
+        {
+          "word": "Boilerplate",
+          "start": 16.72,
+          "end": 17.28
+        },
+        {
+          "word": "und",
+          "start": 17.28,
+          "end": 17.92
+        },
+        {
+          "word": "jedes",
+          "start": 17.92,
+          "end": 18.18
+        },
+        {
+          "word": "Subscription",
+          "start": 18.18,
+          "end": 18.74
+        },
+        {
+          "word": "ist",
+          "start": 18.74,
+          "end": 18.92
+        },
+        {
+          "word": "eine",
+          "start": 18.92,
+          "end": 19.12
+        },
+        {
+          "word": "neue",
+          "start": 19.12,
+          "end": 19.36
+        },
+        {
+          "word": "Fehlerquelle.",
+          "start": 19.36,
+          "end": 19.84
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "start": 20.4,
+      "end": 22.14,
+      "text": "Erstens, das Modell zuerst.",
+      "words": [
+        {
+          "word": "Erstens,",
+          "start": 20.4,
+          "end": 20.92
+        },
+        {
+          "word": "das",
+          "start": 21.2,
+          "end": 21.38
+        },
+        {
+          "word": "Modell",
+          "start": 21.38,
+          "end": 21.68
+        },
+        {
+          "word": "zuerst.",
+          "start": 21.68,
+          "end": 22.14
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "start": 22.66,
+      "end": 27.4,
+      "text": "Deine Daten liegen in einem normalen Signal und die Funktion Form legt das Formular darum.",
+      "words": [
+        {
+          "word": "Deine",
+          "start": 22.66,
+          "end": 22.9
+        },
+        {
+          "word": "Daten",
+          "start": 22.9,
+          "end": 23.14
+        },
+        {
+          "word": "liegen",
+          "start": 23.14,
+          "end": 23.38
+        },
+        {
+          "word": "in",
+          "start": 23.38,
+          "end": 23.64
+        },
+        {
+          "word": "einem",
+          "start": 23.64,
+          "end": 23.92
+        },
+        {
+          "word": "normalen",
+          "start": 23.92,
+          "end": 24.48
+        },
+        {
+          "word": "Signal",
+          "start": 24.48,
+          "end": 24.76
+        },
+        {
+          "word": "und",
+          "start": 24.76,
+          "end": 25.42
+        },
+        {
+          "word": "die",
+          "start": 25.42,
+          "end": 25.54
+        },
+        {
+          "word": "Funktion",
+          "start": 25.54,
+          "end": 25.88
+        },
+        {
+          "word": "Form",
+          "start": 25.88,
+          "end": 26.22
+        },
+        {
+          "word": "legt",
+          "start": 26.22,
+          "end": 26.56
+        },
+        {
+          "word": "das",
+          "start": 26.56,
+          "end": 26.66
+        },
+        {
+          "word": "Formular",
+          "start": 26.66,
+          "end": 27.08
+        },
+        {
+          "word": "darum.",
+          "start": 27.08,
+          "end": 27.4
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "start": 27.4,
+      "end": 33.38,
+      "text": "Zweitens, Binden mit Form fehlt, ein Attribut am Input und Wert- und Status bleiben Synchron.",
+      "words": [
+        {
+          "word": "Zweitens,",
+          "start": 27.4,
+          "end": 28.46
+        },
+        {
+          "word": "Binden",
+          "start": 28.74,
+          "end": 29.06
+        },
+        {
+          "word": "mit",
+          "start": 29.06,
+          "end": 29.24
+        },
+        {
+          "word": "Form",
+          "start": 29.24,
+          "end": 29.5
+        },
+        {
+          "word": "fehlt,",
+          "start": 29.5,
+          "end": 29.76
+        },
+        {
+          "word": "ein",
+          "start": 30.3,
+          "end": 30.44
+        },
+        {
+          "word": "Attribut",
+          "start": 30.44,
+          "end": 30.86
+        },
+        {
+          "word": "am",
+          "start": 30.86,
+          "end": 31.04
+        },
+        {
+          "word": "Input",
+          "start": 31.04,
+          "end": 31.36
+        },
+        {
+          "word": "und",
+          "start": 31.36,
+          "end": 32.0
+        },
+        {
+          "word": "Wert",
+          "start": 32.0,
+          "end": 32.16
+        },
+        {
+          "word": "-",
+          "start": 32.16,
+          "end": 32.34
+        },
+        {
+          "word": "und",
+          "start": 32.34,
+          "end": 32.36
+        },
+        {
+          "word": "Status",
+          "start": 32.36,
+          "end": 32.64
+        },
+        {
+          "word": "bleiben",
+          "start": 32.64,
+          "end": 32.98
+        },
+        {
+          "word": "Synchron.",
+          "start": 32.98,
+          "end": 33.38
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "start": 33.96,
+      "end": 34.66,
+      "text": "In beide Richtungen.",
+      "words": [
+        {
+          "word": "In",
+          "start": 33.96,
+          "end": 34.02
+        },
+        {
+          "word": "beide",
+          "start": 34.02,
+          "end": 34.28
+        },
+        {
+          "word": "Richtungen.",
+          "start": 34.28,
+          "end": 34.66
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "start": 35.16,
+      "end": 36.96,
+      "text": "Drittens, Validierung im Schema.",
+      "words": [
+        {
+          "word": "Drittens,",
+          "start": 35.16,
+          "end": 35.52
+        },
+        {
+          "word": "Validierung",
+          "start": 36.0,
+          "end": 36.5
+        },
+        {
+          "word": "im",
+          "start": 36.5,
+          "end": 36.66
+        },
+        {
+          "word": "Schema.",
+          "start": 36.66,
+          "end": 36.96
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "start": 37.5,
+      "end": 42.18,
+      "text": "Required, E-Mail oder Min schreibst du direkt dazu, inklusive eigener Fehler-Meldung.",
+      "words": [
+        {
+          "word": "Required,",
+          "start": 37.5,
+          "end": 37.96
+        },
+        {
+          "word": "E",
+          "start": 38.48,
+          "end": 38.58
+        },
+        {
+          "word": "-Mail",
+          "start": 38.58,
+          "end": 38.76
+        },
+        {
+          "word": "oder",
+          "start": 38.76,
+          "end": 38.98
+        },
+        {
+          "word": "Min",
+          "start": 38.98,
+          "end": 39.22
+        },
+        {
+          "word": "schreibst",
+          "start": 39.22,
+          "end": 39.68
+        },
+        {
+          "word": "du",
+          "start": 39.68,
+          "end": 39.74
+        },
+        {
+          "word": "direkt",
+          "start": 39.74,
+          "end": 39.96
+        },
+        {
+          "word": "dazu,",
+          "start": 39.96,
+          "end": 40.36
+        },
+        {
+          "word": "inklusive",
+          "start": 40.72,
+          "end": 41.12
+        },
+        {
+          "word": "eigener",
+          "start": 41.12,
+          "end": 41.6
+        },
+        {
+          "word": "Fehler",
+          "start": 41.6,
+          "end": 41.8
+        },
+        {
+          "word": "-Meldung.",
+          "start": 41.8,
+          "end": 42.18
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "start": 42.66,
+      "end": 44.52,
+      "text": "Viertens, alles ist ein Signal.",
+      "words": [
+        {
+          "word": "Viertens,",
+          "start": 42.66,
+          "end": 43.02
+        },
+        {
+          "word": "alles",
+          "start": 43.54,
+          "end": 43.86
+        },
+        {
+          "word": "ist",
+          "start": 43.86,
+          "end": 44.08
+        },
+        {
+          "word": "ein",
+          "start": 44.08,
+          "end": 44.22
+        },
+        {
+          "word": "Signal.",
+          "start": 44.22,
+          "end": 44.52
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "start": 45.14,
+      "end": 49.32,
+      "text": "Valid, Touched und Errors, liehst du direkt im Template, ohne Subscribe.",
+      "words": [
+        {
+          "word": "Valid,",
+          "start": 45.14,
+          "end": 45.44
+        },
+        {
+          "word": "Touched",
+          "start": 45.72,
+          "end": 45.96
+        },
+        {
+          "word": "und",
+          "start": 45.96,
+          "end": 46.14
+        },
+        {
+          "word": "Errors,",
+          "start": 46.14,
+          "end": 46.54
+        },
+        {
+          "word": "liehst",
+          "start": 47.02,
+          "end": 47.16
+        },
+        {
+          "word": "du",
+          "start": 47.16,
+          "end": 47.26
+        },
+        {
+          "word": "direkt",
+          "start": 47.26,
+          "end": 47.46
+        },
+        {
+          "word": "im",
+          "start": 47.46,
+          "end": 47.66
+        },
+        {
+          "word": "Template,",
+          "start": 47.66,
+          "end": 48.14
+        },
+        {
+          "word": "ohne",
+          "start": 48.52,
+          "end": 48.64
+        },
+        {
+          "word": "Subscribe.",
+          "start": 48.64,
+          "end": 49.32
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "start": 49.78,
+      "end": 50.1,
+      "text": "Und jetzt?",
+      "words": [
+        {
+          "word": "Und",
+          "start": 49.78,
+          "end": 49.94
+        },
+        {
+          "word": "jetzt?",
+          "start": 49.94,
+          "end": 50.1
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "start": 50.84,
+      "end": 52.52,
+      "text": "Nimm dir dein nächstes Formular vor.",
+      "words": [
+        {
+          "word": "Nimm",
+          "start": 50.84,
+          "end": 51.08
+        },
+        {
+          "word": "dir",
+          "start": 51.08,
+          "end": 51.26
+        },
+        {
+          "word": "dein",
+          "start": 51.26,
+          "end": 51.4
+        },
+        {
+          "word": "nächstes",
+          "start": 51.4,
+          "end": 51.76
+        },
+        {
+          "word": "Formular",
+          "start": 51.76,
+          "end": 52.22
+        },
+        {
+          "word": "vor.",
+          "start": 52.22,
+          "end": 52.52
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "start": 52.52,
+      "end": 57.1,
+      "text": "Importiere aus Angular Forms Signals und starte mit einem Signalmodell.",
+      "words": [
+        {
+          "word": "Importiere",
+          "start": 52.52,
+          "end": 53.48
+        },
+        {
+          "word": "aus",
+          "start": 53.48,
+          "end": 53.74
+        },
+        {
+          "word": "Angular",
+          "start": 53.74,
+          "end": 54.06
+        },
+        {
+          "word": "Forms",
+          "start": 54.06,
+          "end": 54.56
+        },
+        {
+          "word": "Signals",
+          "start": 54.56,
+          "end": 55.0
+        },
+        {
+          "word": "und",
+          "start": 55.0,
+          "end": 55.5
+        },
+        {
+          "word": "starte",
+          "start": 55.5,
+          "end": 55.88
+        },
+        {
+          "word": "mit",
+          "start": 55.88,
+          "end": 55.98
+        },
+        {
+          "word": "einem",
+          "start": 55.98,
+          "end": 56.22
+        },
+        {
+          "word": "Signalmodell.",
+          "start": 56.22,
+          "end": 57.1
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "start": 57.42,
+      "end": 60.3,
+      "text": "Bestehende Reactive Forms migrierst du danach Schritt für Schritt.",
+      "words": [
+        {
+          "word": "Bestehende",
+          "start": 57.42,
+          "end": 57.88
+        },
+        {
+          "word": "Reactive",
+          "start": 57.88,
+          "end": 58.26
+        },
+        {
+          "word": "Forms",
+          "start": 58.26,
+          "end": 58.8
+        },
+        {
+          "word": "migrierst",
+          "start": 58.8,
+          "end": 59.24
+        },
+        {
+          "word": "du",
+          "start": 59.24,
+          "end": 59.34
+        },
+        {
+          "word": "danach",
+          "start": 59.34,
+          "end": 59.52
+        },
+        {
+          "word": "Schritt",
+          "start": 59.52,
+          "end": 59.82
+        },
+        {
+          "word": "für",
+          "start": 59.82,
+          "end": 60.06
+        },
+        {
+          "word": "Schritt.",
+          "start": 60.06,
+          "end": 60.3
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "start": 60.84,
+      "end": 63.56,
+      "text": "Also, erst das Signal, dann das Formular.",
+      "words": [
+        {
+          "word": "Also,",
+          "start": 60.84,
+          "end": 61.16
+        },
+        {
+          "word": "erst",
+          "start": 61.52,
+          "end": 61.78
+        },
+        {
+          "word": "das",
+          "start": 61.78,
+          "end": 61.92
+        },
+        {
+          "word": "Signal,",
+          "start": 61.92,
+          "end": 62.26
+        },
+        {
+          "word": "dann",
+          "start": 62.72,
+          "end": 62.9
+        },
+        {
+          "word": "das",
+          "start": 62.9,
+          "end": 63.14
+        },
+        {
+          "word": "Formular.",
+          "start": 63.14,
+          "end": 63.56
+        }
+      ]
+    }
+  ]
+}

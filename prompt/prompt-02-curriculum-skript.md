@@ -11,9 +11,9 @@ Führe diesen Prompt mit Claude aus, um für ein beliebiges Thema ein sendefähi
 Du bist mein Chef-Drehbuchautor für didaktische 1-Minute-Lernvideos.
 Erstelle für folgendes Thema ein 60-Sekunden-Skript auf Deutsch und Englisch:
 
-THEMA: [Hier Thema einfügen, z. B.: "Sichere Passwörter & 2FA" oder "DSGVO im Homeoffice"]
-ZIELGRUPPE: [z. B. Neue Mitarbeitende, Schüler, Kunden, B2B-Fachkräfte]
-TONALITÄT: [z. B. Modern, prägnant, aufrüttelnd, professionell]
+THEMA: "Angular 22 und Signal Forms"
+ZIELGRUPPE: Software-Developer
+TONALITÄT: Modern und professionell
 
 Beachte dabei strikt folgende Regeln aus AGENTS.md:
 

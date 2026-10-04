@@ -1,0 +1,9 @@
+Hey nerds! Does your form have more subscriptions than input fields?
+Time for Signal Forms. Since Angular 22, they're stable and production-ready.
+Reactive Forms often mean nesting FormGroups, subscribing to valueChanges and fixing types by hand. Lots of boilerplate, and every subscription is a source of bugs.
+First: Model first. Your data lives in a plain signal, and the form function wraps your form around it.
+Second: Bind with formField. One attribute on the input, and value and state stay in sync, both ways.
+Third: Validation in the schema. Add required, email or min right there, with your own error message.
+Fourth: Everything is a signal. Read valid, touched and errors straight in the template, no subscribe needed.
+So what now? Pick your next new form, import from angular forms signals and start with a signal model. Then migrate existing Reactive Forms step by step.
+Remember: Signal first, the form follows!

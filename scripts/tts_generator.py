@@ -9,6 +9,7 @@ import json
 import argparse
 import urllib.request
 import urllib.error
+import ssl
 
 
 def load_dotenv(path=None):
@@ -25,6 +26,22 @@ def load_dotenv(path=None):
             key, value = key.strip(), value.strip().strip('"').strip("'")
             if key and value and key not in os.environ:
                 os.environ[key] = value
+
+
+
+def ssl_context():
+    """CA-Bundle finden (python.org-Python auf macOS bringt keins mit -> CERTIFICATE_VERIFY_FAILED)."""
+    if os.getenv("SSL_CERT_FILE"):
+        return ssl.create_default_context()
+    try:
+        import certifi
+        return ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        pass
+    for path in ("/etc/ssl/cert.pem", "/opt/homebrew/etc/ca-certificates/cert.pem", "/usr/local/etc/ca-certificates/cert.pem"):
+        if os.path.exists(path):
+            return ssl.create_default_context(cafile=path)
+    return ssl.create_default_context()
 
 
 def generate_tts(text_file, output_path, voice_id=None, lang="de"):
@@ -72,7 +89,7 @@ def generate_tts(text_file, output_path, voice_id=None, lang="de"):
     req = urllib.request.Request(url, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
     try:
         print(f"[*] Contacting ElevenLabs API (Voice: {selected_voice})...")
-        with urllib.request.urlopen(req) as response:
+        with urllib.request.urlopen(req, context=ssl_context()) as response:
             audio_data = response.read()
             os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
             with open(output_path, "wb") as f_out:

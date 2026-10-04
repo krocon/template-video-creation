@@ -35,7 +35,7 @@ Ablauf für jede Zielsprache (DE und EN):
    - Lies 'assets/audio/timestamps_[lang].json' ein und erstelle eine Cue-Point-Tabelle für die 5 Kernpunkte aus Szene 3.
 
 4. HINTERGRUNDMUSIK-BEREITSTELLUNG:
-   - Prüfe, ob 'assets/audio/music/ambient_beat.mp3' existiert.
+   - Prüfe, ob die in video.config.json → audio.music eingetragene Datei existiert.
    - Falls nicht, generiere einen dezenten Ambient-Loop oder fordere mich auf, einen Pixabay-Track abzulegen.
 
 Gib mir nach Abschluss eine Zusammenfassung der Dauern und der wichtigsten Cue-Zeitstempel.

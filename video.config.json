@@ -1,13 +1,12 @@
 {
   "project": "1-Minute-Lernvideos",
   "version": "1.0.0",
-  "topic": "Phishing-Mails sicher erkennen",
+  "topic": "Angular 22 und Signal Forms",
   "defaultLanguage": "de",
-  "supportedLanguages": ["de", "en"],
-  "greetings": {
-    "de": "Moin allerseits!",
-    "en": "Hi nerds!"
-  },
+  "supportedLanguages": [
+    "de",
+    "en"
+  ],
   "video": {
     "defaultFormat": "9x16",
     "formats": {
@@ -47,7 +46,9 @@
           "description": "Warm, engaging, deep authoritative tone"
         }
       }
-    }
+    },
+    "music": "assets/audio/music/vadim_makes_sound-tech-explainer-background-loop-551261.mp3",
+    "musicCredit": "Musik: „Tech Explainer Background Loop“ von vadim_makes_sound (Pixabay)"
   },
   "theme": {
     "name": "Cyber Modern Dark",
@@ -74,36 +75,37 @@
       "id": "scene-01-hook",
       "startSec": 0,
       "endSec": 5,
-      "nameDe": "Kesse Begrüßung („Moin allerseits!“) & Alarmierender Hook (Pling)",
-      "nameEn": "Cheeky Greeting (“Hi nerds!”) & Alarming Hook (Ping)"
+      "nameDe": "Hook: Mehr Subscriptions als Felder?",
+      "nameEn": "Hook: More subscriptions than fields?"
     },
     {
       "id": "scene-02-problem",
       "startSec": 5,
       "endSec": 15,
-      "nameDe": "Problem: Genauso sieht Phishing aus",
-      "nameEn": "Problem: This is what Phishing looks like"
+      "nameDe": "Problem: Boilerplate mit Reactive Forms",
+      "nameEn": "Problem: Reactive Forms boilerplate"
     },
     {
       "id": "scene-03-points",
       "startSec": 15,
       "endSec": 45,
-      "nameDe": "Die 5 Warnzeichen (Checkliste)",
-      "nameEn": "The 5 Warning Signs (Checklist)"
+      "nameDe": "Die 4 Kernpunkte der Signal Forms",
+      "nameEn": "The 4 Signal Forms essentials"
     },
     {
       "id": "scene-04-action",
       "startSec": 45,
       "endSec": 55,
-      "nameDe": "Handlung: Nicht klicken, melden!",
-      "nameEn": "Action: Do not click, report!"
+      "nameDe": "Handlung: Nächstes Formular mit Signal Forms",
+      "nameEn": "Action: Start your next form with Signal Forms"
     },
     {
       "id": "scene-05-outro",
       "startSec": 55,
       "endSec": 60,
-      "nameDe": "Merksatz & CTA: Nicht anbeißen",
-      "nameEn": "Punchline & CTA: Don't take the bait"
+      "nameDe": "Merksatz: Erst das Signal, dann das Formular",
+      "nameEn": "Punchline: Signal first, the form follows"
     }
-  ]
+  ],
+  "topicSlug": "angular_signal_forms"
 }

@@ -187,5 +187,5 @@ python3 scripts/whisper_transcribe.py --audio assets/audio/vo_de_fast.mp3 --outp
 
 # 3. Rendern und Muxen
 node scripts/render_pipeline.js --scene all --format 9x16 --lang de
-python3 scripts/mux_video.py --video dist/raw_video_de.mp4 --audio assets/audio/vo_de_fast.mp3 --music assets/audio/music/ambient_beat.mp3 --output dist/final_phishing_de_9x16.mp4
+python3 scripts/mux_video.py --video dist/raw_video_de.mp4 --audio assets/audio/vo_de_fast.mp3 --music assets/audio/music/vadim_makes_sound-tech-explainer-background-loop-551261.mp3 --output dist/final_phishing_de_9x16.mp4
 ```

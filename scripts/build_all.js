@@ -1,66 +1,35 @@
 #!/usr/bin/env node
 /**
- * Master Build Pipeline for 1-Minute Educational Videos.
- * Automates: Voiceover -> Acceleration -> Transcribe -> Render -> Mux -> Deliverable MP4
+ * Gesamt-Pipeline: (Audio falls fehlend) → Cues → Render → Mux (Voice + gedämpfte Musik).
+ *   node scripts/build_all.js --lang de --format 9x16 [--no-music]
+ * Thema/Dateinamen kommen aus video.config.json → topicSlug.
  */
 import { execSync } from 'child_process';
 import fs from 'fs';
-import path from 'path';
 
 const args = process.argv.slice(2);
-let lang = 'de';
-let format = '9x16';
+const opt = (name, def) => { const i = args.indexOf(`--${name}`); return i >= 0 && args[i + 1] ? args[i + 1] : def; };
+const lang = opt('lang', 'de');
+const format = opt('format', '9x16');
+const config = JSON.parse(fs.readFileSync('video.config.json', 'utf8'));
+const slug = config.topicSlug;
 
-for (let i = 0; i < args.length; i++) {
-  if (args[i] === '--lang' && args[i + 1]) lang = args[i + 1];
-  if (args[i] === '--format' && args[i + 1]) format = args[i + 1];
-}
+const fastAudio = `assets/audio/${slug}_vo_${lang}_fast.mp3`;
+const rawVideo = `dist/raw_${slug}_${lang}_${format}.mp4`;
+const finalVideo = `dist/final_${slug}_${lang}_${format}.mp4`;
+const bgMusic = config.audio?.music || '';   // Hintergrundmusik: video.config.json → audio.music
 
-console.log(`=======================================================`);
-console.log(`🚀 1-MINUTE VIDEO BUILD PIPELINE`);
-console.log(`   Language: ${lang.toUpperCase()} | Format: ${format}`);
-console.log(`=======================================================\n`);
+const run = (name, cmd) => {
+  console.log(`\n▶ ${name}\n  $ ${cmd}`);
+  try { execSync(cmd, { stdio: 'inherit' }); } catch { console.error(`❌ Abbruch bei: ${name}`); process.exit(1); }
+};
 
-const scriptText = `assets/scripts_text/phishing_${lang}.txt`;
-const rawAudio = `assets/audio/vo_${lang}.mp3`;
-const fastAudio = `assets/audio/vo_${lang}_fast.mp3`;
-const timestampsJson = `assets/audio/timestamps_${lang}.json`;
-const rawVideo = `dist/raw_${lang}_${format}.mp4`;
-const finalVideo = `dist/final_phishing_${lang}_${format}.mp4`;
-const bgMusic = `assets/audio/music/ambient_beat.mp3`;
-
-function runStep(name, cmd) {
-  console.log(`\n▶ [STEP] ${name}`);
-  console.log(`  $ ${cmd}`);
-  try {
-    execSync(cmd, { stdio: 'inherit' });
-  } catch (err) {
-    console.error(`❌ Failed at step: ${name}`);
-    process.exit(1);
-  }
-}
-
-// 1. Audio Generation (if not already present)
-if (!fs.existsSync(rawAudio)) {
-  runStep('Generate TTS Voiceover', `python3 scripts/tts_generator.py --text-file "${scriptText}" --output "${rawAudio}" --lang "${lang}"`);
-} else {
-  console.log(`ℹ️ [SKIP] Using existing raw audio: ${rawAudio}`);
-}
-
-// 2. Audio Acceleration (atempo=1.15)
-runStep('Accelerate Voiceover (atempo=1.15)', `python3 scripts/audio_accelerator.py --input "${rawAudio}" --output "${fastAudio}" --speed 1.15`);
-
-// 3. Whisper Transcription & Cue Timestamps
-runStep('Transcribe Audio to Timestamps', `python3 scripts/whisper_transcribe.py --audio "${fastAudio}" --output "${timestampsJson}" --lang "${lang}"`);
-
-// 4. Render Motion Graphics Composition
-runStep('Render Video Frames via HyperFrames', `node scripts/render_pipeline.js --format "${format}" --lang "${lang}" --output "${rawVideo}"`);
-
-// 5. Mux Video + Accelerated Voice + Background Music with Ducking
-const musicArg = fs.existsSync(bgMusic) ? `--music "${bgMusic}"` : '';
-runStep('Mux Audio & Video with Sidechain Ducking', `python3 scripts/mux_video.py --video "${rawVideo}" --voice "${fastAudio}" --output "${finalVideo}" ${musicArg}`);
-
-console.log(`\n=======================================================`);
-console.log(`🎉 BUILD FINISHED! Deliverable ready:`);
-console.log(`   ▶ ${finalVideo}`);
-console.log(`=======================================================\n`);
+console.log(`🚀 BUILD ${slug} · ${lang.toUpperCase()} · ${format}`);
+if (!fs.existsSync(fastAudio)) run('Audio-Pipeline (TTS → atempo → Pausen → Whisper → Cues)', `bash scripts/run_audio.sh ${slug}`);
+else run('Beat-Sync-Cues aktualisieren', `node scripts/build_cues.js ${slug}`);
+run('Motion Graphics rendern (HyperFrames)', `node scripts/render_pipeline.js --lang ${lang} --format ${format} --output "${rawVideo}"`);
+const noMusic = args.includes('--no-music');
+if (!noMusic && bgMusic && !fs.existsSync(bgMusic)) { console.error(`❌ Musik nicht gefunden: ${bgMusic} (video.config.json → audio.music)`); process.exit(1); }
+const music = !noMusic && bgMusic ? `--music "${bgMusic}"` : '';
+run('Muxen: Voice + Musik mit Ducking', `python3 scripts/mux_video.py --video "${rawVideo}" --voice "${fastAudio}" --output "${finalVideo}" ${music} --ducking-db ${config.audio?.musicDuckingVolumeDb ?? -20}`);
+console.log(`\n🎉 Fertig: ${finalVideo}`);

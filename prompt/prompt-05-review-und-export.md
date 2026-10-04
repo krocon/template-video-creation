@@ -36,7 +36,7 @@ Schritte:
      python3 scripts/mux_video.py \
        --video dist/raw_[lang]_9x16.mp4 \
        --voice assets/audio/vo_[lang]_fast.mp3 \
-       --music assets/audio/music/ambient_beat.mp3 \
+       --music assets/audio/music/vadim_makes_sound-tech-explainer-background-loop-551261.mp3 \
        --output dist/final_[thema]_[lang]_9x16.mp4
 
 4. FINALE PRÜFUNG & BEREITSTELLUNG:
