@@ -8,11 +8,12 @@
       "scene": "scene-01-hook",
       "start": 0.0,
       "end": 5.2,
-      "text": "Ping! An email from your bank: Your account will be locked, unless you click right here.",
+      "text": "Hi nerds! Ping! An email from your bank: Your account will be locked, unless you click right here.",
       "cues": {
-        "notification": 0.2,
-        "bank_alert": 1.8,
-        "button_blink": 3.9
+        "greeting": 0.05,
+        "notification": 0.8,
+        "bank_alert": 2.2,
+        "button_blink": 4.1
       }
     },
     {

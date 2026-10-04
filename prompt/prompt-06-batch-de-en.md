@@ -17,8 +17,8 @@ FORMAT: [Standard: 9x16 für Social Media oder 16x9 für LMS]
 Führe die Pipeline in zwei Phasen durch:
 
 PHASE 1: DREHBUCH & FREIGABE (0 Credits)
-1. Erstelle das deutsche Skript in 'assets/scripts_text/[slug]_de.txt' (135–155 Wörter).
-2. Erstelle das englische Skript in 'assets/scripts_text/[slug]_en.txt' (135–155 Wörter).
+1. Erstelle das deutsche Skript in 'assets/scripts_text/[slug]_de.txt' (135–155 Wörter, Pflicht-Start mit „Moin allerseits!“).
+2. Erstelle das englische Skript in 'assets/scripts_text/[slug]_en.txt' (135–155 Wörter, Pflicht-Start mit “Hi nerds!”).
 3. Zeige beide Skripte in einer übersichtlichen Gegenüberstellung.
 4. STOPP: Warte auf meine Freigabe ("Go!").
 

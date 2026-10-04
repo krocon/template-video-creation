@@ -8,11 +8,12 @@
       "scene": "scene-01-hook",
       "start": 0.0,
       "end": 5.2,
-      "text": "Pling. Eine Mail von deiner Bank. Dein Konto wird gesperrt, außer du klickst sofort hier.",
+      "text": "Moin allerseits! Pling. Eine Mail von deiner Bank. Dein Konto wird gesperrt, außer du klickst sofort hier.",
       "cues": {
-        "notification": 0.2,
-        "bank_alert": 1.8,
-        "button_blink": 3.9
+        "greeting": 0.05,
+        "notification": 0.8,
+        "bank_alert": 2.2,
+        "button_blink": 4.1
       }
     },
     {

@@ -4,6 +4,10 @@
   "topic": "Phishing-Mails sicher erkennen",
   "defaultLanguage": "de",
   "supportedLanguages": ["de", "en"],
+  "greetings": {
+    "de": "Moin allerseits!",
+    "en": "Hi nerds!"
+  },
   "video": {
     "defaultFormat": "9x16",
     "formats": {
@@ -70,8 +74,8 @@
       "id": "scene-01-hook",
       "startSec": 0,
       "endSec": 5,
-      "nameDe": "Alarmierender Hook (Pling)",
-      "nameEn": "Alarming Hook (Ping)"
+      "nameDe": "Kesse Begrüßung („Moin allerseits!“) & Alarmierender Hook (Pling)",
+      "nameEn": "Cheeky Greeting (“Hi nerds!”) & Alarming Hook (Ping)"
     },
     {
       "id": "scene-02-problem",

@@ -49,10 +49,10 @@ Standard-TTS-Stimmen (ElevenLabs, OpenAI) sprechen für moderne mobile Lernforma
 
 ## ⏱️ 3. Die 60-Sekunden-Dramaturgie
 
-Jedes Video folgt einer didaktisch erprobten 5-Szenen-Struktur:
+Jedes Video folgt einer didaktisch erprobten 5-Szenen-Struktur und startet immer mit der verbindlichen kessen Begrüßungsformel:
 
 ```
-[00:00 - 00:05]   SZENE 1: HOOK (Akustischer Reiz "Pling!", Neugier/Alarm)
+[00:00 - 00:05]   SZENE 1: HOOK (Kesse Begrüßung: „Moin allerseits!“ / “Hi nerds!” + "Pling!")
        ↓
 [00:05 - 00:15]   SZENE 2: PROBLEM (Gefahr visualisieren, "Genauso sieht Phishing aus!")
        ↓

@@ -18,7 +18,10 @@ TONALITÄT: [z. B. Modern, prägnant, aufrüttelnd, professionell]
 Beachte dabei strikt folgende Regeln aus AGENTS.md:
 
 1. DIE 60-SEKUNDEN-DRAMATURGIE (5 SZENEN):
-   - Szene 1: Hook (00:00 - 00:05) -> Überraschende Frage, akustischer Reiz ("Pling!"), akute Gefahr oder Neugier.
+   - Szene 1: Hook (00:00 - 00:05) -> Verpflichtende kesse Begrüßung:
+     * DE: „Moin allerseits!“
+     * EN: “Hi nerds!”
+     Danach sofort akustischer Reiz ("Pling!"), überraschende Frage oder akute Gefahr.
    - Szene 2: Problem & Kontext (00:05 - 00:15) -> Warum ist das relevant? Welche Konsequenzen drohen?
    - Szene 3: Die Kernpunkte (00:15 - 00:45) -> Exakt 3 bis 5 handlungsorientierte Warnzeichen oder Regeln. Jede Regel mit einer prägnanten Überschrift und einer kurzen Erklärung.
    - Szene 4: Handlung & Lösung (00:45 - 00:55) -> Sofort umsetzbare Verhaltensanweisung ("Was tust du jetzt?").
@@ -26,10 +29,11 @@ Beachte dabei strikt folgende Regeln aus AGENTS.md:
 
 2. WORTZAHL-GATE (2,4 Wörter pro Sekunde):
    - Gesamtlänge Ziel: 58 bis 60 Sekunden (nach atempo=1.15 Beschleunigung).
-   - Erlaubte Wortzahl: 135 bis maximal 155 Wörter.
+   - Erlaubte Wortzahl: 135 bis maximal 155 Wörter (inklusive Begrüßung).
    - Zähle für jede Sprache die Wörter und zeige die Wortanzahl explizit an.
 
 3. SPRACH-STANDARDS:
+   - Pflicht-Einstieg: Jedes deutsche Skript beginnt mit „Moin allerseits!“, jedes englische mit “Hi nerds!”.
    - Deutsch: Typografische Anführungszeichen („...“), Achtung bei langen Komposita.
    - Englisch: Typografische Anführungszeichen (“...”), idiomatische Redewendungen.
    - Visuelle Prompts: Nur auf Englisch mit "no readable text, no captions".

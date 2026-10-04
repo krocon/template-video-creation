@@ -27,7 +27,7 @@ Führe folgende Programmier-Schritte durch:
 
 2. BEAT-SYNC IN DER GSAP-TIMELINE ('src/timeline.js'):
    - Binde die Animationen framegenau an die Cues aus der Zeitstempel-Datei:
-     * Hook (0.0s): Reiz-Element erscheint, Audio-Signal optisch verstärken.
+     * Hook (0.0s): Kesse Begrüßung ('#greeting-badge': „Moin allerseits!“ / “Hi nerds!”) poppt sofort auf (0.05s), danach Reiz-Element/Audio-Signal optisch verstärken.
      * Problem (ab ca. 5.3s): Problem-Visualisierung, Warn-Highlighting.
      * Kernpunkte 1 bis 5 (ab 15.0s): Jeder Punkt erscheint GENAU in der Millisekunde, in der die Stimme das Schlagwort ausspricht!
      * Handlung (ab ca. 45.0s): 3 Aktions-Elemente sliden nacheinander herein.

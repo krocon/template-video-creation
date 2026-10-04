@@ -124,6 +124,32 @@ body {
   visibility: visible;
 }
 
+/* Cheeky Greeting Badge (Scene 1) */
+.greeting-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(99, 102, 241, 0.2));
+  border: 1.5px solid var(--color-primary);
+  box-shadow: 0 0 25px var(--color-primary-glow), inset 0 0 15px rgba(56, 189, 248, 0.15);
+  padding: 10px 28px;
+  border-radius: 9999px;
+  font-family: var(--font-sans);
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transform-origin: center center;
+}
+
+.greeting-badge .greeting-wave {
+  display: inline-block;
+  font-size: 32px;
+}
+
 /* Typography Utilities */
 .scene-title {
   font-size: 56px;

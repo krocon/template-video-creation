@@ -29,6 +29,32 @@ export function initComposition(lang = 'de', format = '9x16') {
     category: lang === 'de' ? '60S BRIEFING' : '60S BRIEFING'
   }));
 
+  // Populate Greeting & Scene Titles based on language
+  const greetingText = document.getElementById('greeting-text');
+  if (greetingText) {
+    greetingText.textContent = lang === 'de' ? '„Moin allerseits!“' : '“Hi nerds!”';
+  }
+
+  const s1Title = document.getElementById('scene-01-title');
+  const s1Sub = document.getElementById('scene-01-subtitle');
+  if (s1Title) s1Title.innerHTML = lang === 'de' ? 'PLING! <span class="highlight">Mail deiner Bank?</span>' : 'PING! <span class="highlight">Mail from your bank?</span>';
+  if (s1Sub) s1Sub.textContent = lang === 'de' ? '„Dein Konto wird gesperrt, wenn du nicht sofort klickst!“' : '“Your account will be locked, unless you click right here!”';
+
+  const s2Title = document.getElementById('scene-02-title');
+  const s2Sub = document.getElementById('scene-02-subtitle');
+  if (s2Title) s2Title.innerHTML = lang === 'de' ? 'MOMENT MAL.<br><span class="highlight">Genauso sieht Phishing aus!</span>' : 'WAIT A SECOND.<br><span class="highlight">This is what phishing looks like!</span>';
+  if (s2Sub) s2Sub.textContent = lang === 'de' ? 'Kriminelle wollen deine Passwörter & TANs abgreifen. Erkennst du die Falle?' : 'Scammers want your passwords & PINs. Can you spot the trap?';
+
+  const s3Title = document.getElementById('scene-03-title');
+  const s3Sub = document.getElementById('scene-03-subtitle');
+  if (s3Title) s3Title.innerHTML = lang === 'de' ? 'DIE 5 <span class="highlight">WARNZEICHEN</span>' : 'THE 5 <span class="highlight">WARNING SIGNS</span>';
+  if (s3Sub) s3Sub.textContent = lang === 'de' ? 'Achte auf diese Details, bevor du auch nur einen Klick wagst:' : 'Check these warning signs before you take even a single click:';
+
+  const s4Title = document.getElementById('scene-04-title');
+  const s4Sub = document.getElementById('scene-04-subtitle');
+  if (s4Title) s4Title.innerHTML = lang === 'de' ? 'WAS TUN IM <span class="highlight">ZWEIFELSFALL?</span>' : 'WHAT TO DO IF <span class="highlight">IN DOUBT?</span>';
+  if (s4Sub) s4Sub.textContent = lang === 'de' ? 'Drei goldene Verhaltensregeln für deine Sicherheit:' : 'Three golden security rules for your protection:';
+
   // Populate Scenes
   const s1Slot = document.getElementById('scene-01-slot');
   s1Slot.innerHTML = '';
@@ -57,22 +83,25 @@ function buildTimeline() {
   const compId = 'one-minute-lesson';
   window.__timelines = window.__timelines || {};
 
-  if (window.__timelines[compId]) {
-    window.__timelines[compId].kill();
+  let tl = window.__timelines[compId];
+  if (tl) {
+    tl.clear();
+    tl.pause(0);
+  } else {
+    tl = gsap.timeline({ paused: true });
+    window.__timelines[compId] = tl;
   }
 
   // Pre-set initial states (MANDATORY HyperFrames rule: gsap.set before timeline)
   gsap.set('.scene-container', { opacity: 0, display: 'none' });
   gsap.set('#scene-01', { opacity: 1, display: 'flex' });
   gsap.set('#progress-fill', { width: '0%' });
+  gsap.set('#greeting-badge', { opacity: 0, scale: 0.6, y: -20 });
   gsap.set('#mail-mockup', { y: 60, opacity: 0, scale: 0.95 });
   gsap.set('.point-card', { opacity: 0.2, y: 20 });
   gsap.set('.action-item', { opacity: 0, x: -30 });
   gsap.set('#outro-punchline', { scale: 0.8, opacity: 0 });
   gsap.set('#outro-badge', { scale: 0.5, opacity: 0 });
-
-  // Paused GSAP master timeline
-  const tl = gsap.timeline({ paused: true });
 
   // Global Progress Bar (0 to 60 seconds)
   tl.to('#progress-fill', {
@@ -82,13 +111,30 @@ function buildTimeline() {
   }, 0);
 
   // --- SCENE 1: Hook (0.0s - 5.2s) ---
+  // Cheeky Greeting pop-in right at video start
+  tl.to('#greeting-badge', {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    duration: 0.5,
+    ease: 'back.out(1.8)'
+  }, 0.05);
+
+  tl.to('#greeting-badge .greeting-wave', {
+    rotation: 20,
+    repeat: 3,
+    yoyo: true,
+    duration: 0.15,
+    ease: 'power1.inOut'
+  }, 0.25);
+
   tl.to('#scene-01 #mail-mockup', {
     y: 0,
     opacity: 1,
     scale: 1,
     duration: 0.8,
     ease: 'back.out(1.4)'
-  }, 0.2);
+  }, 0.35);
 
   tl.to('#scene-01 #cta-fake-btn', {
     scale: 1.05,
@@ -233,8 +279,7 @@ function buildTimeline() {
   return tl;
 }
 
-// Interactive Preview Controls
-document.addEventListener('DOMContentLoaded', () => {
+function setupApp() {
   initComposition(currentLang, currentFormat);
 
   const btnPlay = document.getElementById('btn-play');
@@ -282,4 +327,10 @@ document.addEventListener('DOMContentLoaded', () => {
       timeDisplay.innerText = `${min}:${sec}`;
     }
   });
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', setupApp);
+} else {
+  setupApp();
+}

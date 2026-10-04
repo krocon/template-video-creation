@@ -10,6 +10,9 @@ This project generates professional 1-minute educational motion graphics videos 
 
 2. **The 2-Phase Rule (Crucial)**:
    - **Phase 1 (Curriculum & Script)**: 0 cost. Draft the 60-second script (DE and/or EN), calculate word count (~135-155 words total, ~2.3-2.5 words/sec), structure into 5 scenes (Hook, Problem, 3-5 Points, Action, Outro).
+   - **Mandatory Cheeky Greeting**: Every video MUST begin with:
+     * German: `„Moin allerseits!“`
+     * English: `“Hi nerds!”`
    - **Freigabe-Gate**: STOP and wait for explicit user approval ("Go") before triggering any TTS API or rendering.
    - **Phase 2 (Production)**: Run audio pipeline (ElevenLabs TTS -> `atempo=1.15` via ffmpeg -> Whisper transcription -> beat-synced GSAP animation -> render & mux).
 
@@ -20,8 +23,8 @@ This project generates professional 1-minute educational motion graphics videos 
    - Background music must duck under the voiceover (-18dB to -22dB).
 
 4. **Multi-Language Standards (DE & EN)**:
-   - German: Use `hyphens: auto`, `text-wrap: pretty`, typographical quotes `„...“`. Account for longer compound words.
-   - English: Use typographical quotes `“...”`, concise wording.
+   - German: Always starts with `„Moin allerseits!“`. Use `hyphens: auto`, `text-wrap: pretty`, typographical quotes `„...“`. Account for longer compound words.
+   - English: Always starts with `“Hi nerds!”`. Use typographical quotes `“...”`, concise wording.
    - All AI visual prompts (images/video clips) must be in English with `"no readable text, no captions"`.
 
 5. **Commands Quick Reference**:

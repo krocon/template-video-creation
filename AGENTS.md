@@ -73,7 +73,12 @@ Dieses Template-Projekt folgt dem in der Praxis bewährten **Code-First Motion G
 ### 3.5 Hybride Medienstrategie (Kosten- & Qualitätsoptimum)
 - **HyperFrames (GSAP/HTML/CSS)**: Erklärungen, UI-Mocks, Checklisten, Vergleiche, Typo, Daten -> **Kosten: 0**.
 - **Cineastische KI-Clips (Seedance 2.0 / 2.5)**: Nur für emotionale Story-Momente (sparsam, z. B. 4–8 Sekunden Intro-Hook).
-- **KI-Bilder (GPT Image 2 / Flux)**: Für illustrative Charakter- und Kontext-Bilder.
+### 3.6 Pflicht-Begrüßung: Die kesse Einstiegsformel
+Jedes Video startet ausnahmslos mit einer verbindlichen kessen Begrüßung:
+- **Deutsch (DE)**: `„Moin allerseits!“`
+- **Englisch (EN)**: `“Hi nerds!”`
+- **Zweck & Wirkung**: Schafft sofort einen nahbaren, energiegeladenen Einstieg und dient als unverkennbare akustische & visuelle Audiomarke („Brand Signature“).
+- **Visuelle Umsetzung**: Ein leuchtendes Begrüßungs-Badge (`.greeting-badge`) ploppt direkt bei `0.0s – 0.5s` mit federndem Easing auf.
 
 ---
 
@@ -83,7 +88,7 @@ Ein 1-Minute-Lernvideo folgt exakt diesem 5-teiligen Spannungsbogen:
 
 ```mermaid
 graph LR
-    A["00:00 - 00:05<br/><b>1. Hook</b><br/>Alarmierender Impuls"] --> B["00:05 - 00:15<br/><b>2. Problem & Kontext</b><br/>Warum betrifft es mich?"]
+    A["00:00 - 00:05<br/><b>1. Hook</b><br/>Kesse Begrüßung + Impuls"] --> B["00:05 - 00:15<br/><b>2. Problem & Kontext</b><br/>Warum betrifft es mich?"]
     B --> C["00:15 - 00:45<br/><b>3. 3-5 Kernpunkte</b><br/>Synchrone Visuals / Check"]
     C --> D["00:45 - 00:55<br/><b>4. Handlung / Lösung</b><br/>Sofortige Handlungsempfehlung"]
     D --> E["00:55 - 01:00<br/><b>5. Merksatz & Outro</b><br/>Einprägsamer Abschluss"]
@@ -91,7 +96,7 @@ graph LR
 
 | Zeitfenster | Szene | Ziel & Visuelle Choreografie |
 |---|---|---|
-| `00:00 – 00:05` | **Hook** | Ungewöhnliche Frage, akustischer Reiz („Pling!“), dramatischer Ersteindruck. |
+| `00:00 – 00:05` | **Hook** | **Kesse Begrüßung** (DE: *„Moin allerseits!“*, EN: *“Hi nerds!”*), direkt gefolgt von akustischem Reiz („Pling!“), Frage oder akuter Gefahr. |
 | `00:05 – 00:15` | **Problem** | Visualisierung des Dilemmas / Fehlers. |
 | `00:15 – 00:45` | **Kernpunkte** | 3 bis 5 prägnante Checkpunkte / Regeln. Jede Regel erhält eine eigene Karte / Badge. |
 | `00:45 – 00:55` | **Lösung** | Konkrete Handlungsanweisung („Nicht klicken, sondern melden“). |
