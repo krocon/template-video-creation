@@ -6,3 +6,4 @@ snapshots/
 .DS_Store
 .env
 .cache/
+/package-lock.json

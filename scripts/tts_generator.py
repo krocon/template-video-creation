@@ -10,8 +10,28 @@ import argparse
 import urllib.request
 import urllib.error
 
+
+def load_dotenv(path=None):
+    """Minimal .env loader (no dependency). Existing env vars take precedence."""
+    path = path or os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".env")
+    if not os.path.exists(path):
+        return
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            key, value = key.strip(), value.strip().strip('"').strip("'")
+            if key and value and key not in os.environ:
+                os.environ[key] = value
+
+
 def generate_tts(text_file, output_path, voice_id=None, lang="de"):
+    load_dotenv()
     api_key = os.getenv("ELEVENLABS_API_KEY")
+    if api_key and api_key.startswith("dein_key"):
+        api_key = None  # placeholder from .env.example
 
     with open(text_file, "r", encoding="utf-8") as f:
         text = f.read().strip()
@@ -20,10 +40,11 @@ def generate_tts(text_file, output_path, voice_id=None, lang="de"):
 
     # Default ElevenLabs voices
     default_voices = {
-        "de": "21m00Tcm4TlvDq8ikWAM",  # Alex / Rachel fallback
+        "de": "21m00Tcm4TlvDq8ikWAM",  # Rachel (multilingual v2 spricht Deutsch)
         "en": "pNInz6obpgDQGcFmaJgB"   # Adam
     }
-    selected_voice = voice_id or default_voices.get(lang, default_voices["de"])
+    env_voice = os.getenv(f"ELEVENLABS_VOICE_{lang.upper()}")
+    selected_voice = voice_id or env_voice or default_voices.get(lang, default_voices["de"])
 
     if not api_key:
         print("[!] WARN: ELEVENLABS_API_KEY environment variable is not set.")

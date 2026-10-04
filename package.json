@@ -13,7 +13,11 @@
     "pipeline:audio": "node scripts/pipeline_audio.js",
     "render": "node scripts/render_pipeline.js",
     "build": "node scripts/build_all.js",
-    "doctor": "npx -y hyperframes doctor"
+    "doctor": "npx -y hyperframes doctor",
+    "setup": "npm run setup:whisper && npm run setup:browser",
+    "setup:whisper": "python3 -m pip install -U openai-whisper",
+    "setup:browser": "npx -y hyperframes browser ensure",
+    "setup:check": "bash scripts/setup_check.sh"
   },
   "keywords": [
     "motion-graphics",
