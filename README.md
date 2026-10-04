@@ -4,6 +4,8 @@
 
 Dieses Projekt ist eine schlüsselfertige Vorlage zur schnellen Erzeugung von 60-Sekunden-Erklärvideos und Lern-Shorts für Social Media (**9:16**: YouTube Shorts, Instagram Reels, TikTok, LinkedIn) sowie E-Learning Plattformen (**16:9**: LMS, Unternehmensschulungen, YouTube).
 
+Basiert auf: https://www.youtube.com/watch?v=Vc0lLq3SVlw
+
 ---
 
 ## 📌 1. Leitidee & Erkenntnisse aus dem Referenz-Video
