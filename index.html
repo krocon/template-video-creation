@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1-Minute-Lernvideo: Phishing Mails erkennen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+</head>
+<body>
+  <!-- HyperFrames Composition Container -->
+  <div id="composition" 
+       data-composition-id="one-minute-lesson" 
+       data-width="1080" 
+       data-height="1920" 
+       data-duration="60"
+       data-format="9x16">
+    
+    <!-- Background Ambient Overlays -->
+    <div class="grid-overlay"></div>
+    <div class="ambient-glow"></div>
+
+    <!-- Persistent Header -->
+    <div id="header-slot"></div>
+
+    <!-- Scene 1: Hook (0-5.2s) -->
+    <div class="scene-container active" id="scene-01">
+      <h1 class="scene-title">PLING! <span class="highlight">Mail deiner Bank?</span></h1>
+      <p class="scene-subtitle">„Dein Konto wird gesperrt, wenn du nicht sofort klickst!“</p>
+      <div id="scene-01-slot"></div>
+    </div>
+
+    <!-- Scene 2: Problem (5.2-15s) -->
+    <div class="scene-container" id="scene-02">
+      <h2 class="scene-title">MOMENT MAL.<br><span class="highlight">Genauso sieht Phishing aus!</span></h2>
+      <p class="scene-subtitle">Kriminelle wollen deine Passwörter & TANs abgreifen. Erkennst du die Falle?</p>
+      <div id="scene-02-slot"></div>
+    </div>
+
+    <!-- Scene 3: Points (15-44.5s) -->
+    <div class="scene-container" id="scene-03">
+      <h2 class="scene-title">DIE 5 <span class="highlight">WARNZEICHEN</span></h2>
+      <p class="scene-subtitle">Achte auf diese Details, bevor du auch nur einen Klick wagst:</p>
+      <div id="scene-03-slot"></div>
+    </div>
+
+    <!-- Scene 4: Action (44.5-54.5s) -->
+    <div class="scene-container" id="scene-04">
+      <h2 class="scene-title">WAS TUN IM <span class="highlight">ZWEIFELSFALL?</span></h2>
+      <p class="scene-subtitle">Drei goldene Verhaltensregeln für deine Sicherheit:</p>
+      <div id="scene-04-slot"></div>
+    </div>
+
+    <!-- Scene 5: Outro (54.5-60s) -->
+    <div class="scene-container" id="scene-05">
+      <div id="scene-05-slot"></div>
+    </div>
+  </div>
+
+  <!-- Interactive Controls Overlay (Disabled during headless renders) -->
+  <div id="preview-controls" style="position: fixed; bottom: 20px; right: 20px; background: rgba(15,23,42,0.9); padding: 12px 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); font-family: sans-serif; font-size: 13px; z-index: 999; display: flex; gap: 10px; align-items: center;">
+    <button id="btn-play" style="background: #38bdf8; color: #000; border: none; padding: 6px 14px; border-radius: 6px; font-weight: bold; cursor: pointer;">Play / Pause</button>
+    <button id="btn-toggle-lang" style="background: #334155; color: #fff; border: 1px solid #64748b; padding: 6px 12px; border-radius: 6px; cursor: pointer;">DE / EN</button>
+    <button id="btn-toggle-format" style="background: #334155; color: #fff; border: 1px solid #64748b; padding: 6px 12px; border-radius: 6px; cursor: pointer;">9:16 / 16:9</button>
+    <span id="time-display" style="font-family: monospace; color: #38bdf8; min-width: 50px;">00:00</span>
+  </div>
+
+  <script>
+    window.__timelines = window.__timelines || {};
+    window.__timelines["one-minute-lesson"] = gsap.timeline({ paused: true });
+  </script>
+  <script type="module" src="./src/timeline.js"></script>
+</body>
+</html>

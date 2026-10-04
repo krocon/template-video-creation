@@ -1,0 +1,103 @@
+{
+  "language": "de",
+  "duration": 59.8,
+  "tempo_applied": 1.15,
+  "segments": [
+    {
+      "id": 1,
+      "scene": "scene-01-hook",
+      "start": 0.0,
+      "end": 5.2,
+      "text": "Pling. Eine Mail von deiner Bank. Dein Konto wird gesperrt, außer du klickst sofort hier.",
+      "cues": {
+        "notification": 0.2,
+        "bank_alert": 1.8,
+        "button_blink": 3.9
+      }
+    },
+    {
+      "id": 2,
+      "scene": "scene-02-problem",
+      "start": 5.3,
+      "end": 14.8,
+      "text": "Moment mal. Genauso sieht Phishing aus. Damit wollen Betrüger an deine Daten. Aber du erkennst solche Mails an ein paar typischen Zeichen:",
+      "cues": {
+        "freeze_warning": 5.5,
+        "scam_badge": 8.0,
+        "checklist_intro": 12.0
+      }
+    },
+    {
+      "id": 3,
+      "scene": "scene-03-points",
+      "start": 14.9,
+      "end": 44.5,
+      "text": "Die 5 Warnzeichen der Phishing-Mail",
+      "points": [
+        {
+          "number": 1,
+          "keyword": "Absender",
+          "start": 15.0,
+          "end": 20.8,
+          "text": "Erstens: Der Absender. Fahr mit der Maus über den Namen ohne zu klicken. Steckt eine fremde Adresse dahinter? Vorsicht!",
+          "cue": 15.1
+        },
+        {
+          "number": 2,
+          "keyword": "Anrede & Grammatik",
+          "start": 20.9,
+          "end": 26.5,
+          "text": "Zweitens: Eine allgemeine Anrede wie „Sehr geehrter Kunde“, oft mit Fehlern im Text.",
+          "cue": 21.0
+        },
+        {
+          "number": 3,
+          "keyword": "Künstlicher Zeitdruck",
+          "start": 26.6,
+          "end": 32.2,
+          "text": "Drittens: Zeitdruck und Drohungen. Der Druck soll dich zum schnellen Klicken bringen.",
+          "cue": 26.7
+        },
+        {
+          "number": 4,
+          "keyword": "Passwort & PIN-Abfrage",
+          "start": 32.3,
+          "end": 38.0,
+          "text": "Viertens: Du sollst Passwort, PIN oder TAN eingeben. Deine Bank fragt so etwas nie per Mail ab!",
+          "cue": 32.4
+        },
+        {
+          "number": 5,
+          "keyword": "Gefälschte Links & Anhänge",
+          "start": 38.1,
+          "end": 44.5,
+          "text": "Fünftens: Links und Anhänge. Prüf vor dem Klick, wohin ein Link wirklich führt. Anhänge aus unerwarteten Mails öffnest du nicht.",
+          "cue": 38.2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "scene": "scene-04-action",
+      "start": 44.6,
+      "end": 54.5,
+      "text": "Du bist unsicher? Dann nicht klicken und nicht antworten! Frag beim Absender nach über einen Weg, den du kennst, und melde die Mail deiner IT-Abteilung.",
+      "cues": {
+        "stop_shield": 45.0,
+        "verify_channel": 48.5,
+        "it_report": 51.5
+      }
+    },
+    {
+      "id": 5,
+      "scene": "scene-05-outro",
+      "start": 54.6,
+      "end": 59.8,
+      "text": "Also: Kurz prüfen, nicht anbeißen!",
+      "cues": {
+        "punchline": 55.0,
+        "logo_reveal": 57.0
+      }
+    }
+  ]
+}

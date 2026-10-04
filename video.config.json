@@ -1,0 +1,105 @@
+{
+  "project": "1-Minute-Lernvideos",
+  "version": "1.0.0",
+  "topic": "Phishing-Mails sicher erkennen",
+  "defaultLanguage": "de",
+  "supportedLanguages": ["de", "en"],
+  "video": {
+    "defaultFormat": "9x16",
+    "formats": {
+      "9x16": {
+        "width": 1080,
+        "height": 1920,
+        "name": "Vertical Short (Reels, TikTok, Shorts)"
+      },
+      "16x9": {
+        "width": 1920,
+        "height": 1080,
+        "name": "Horizontal Standard (LMS, YouTube, E-Learning)"
+      }
+    },
+    "durationSeconds": 60,
+    "fps": 30,
+    "targetWordCount": {
+      "min": 135,
+      "max": 155,
+      "wordsPerSecond": 2.4
+    }
+  },
+  "audio": {
+    "speedFactor": 1.15,
+    "musicDuckingVolumeDb": -20,
+    "elevenlabs": {
+      "model": "eleven_multilingual_v2",
+      "voices": {
+        "de": {
+          "name": "Alex",
+          "voice_id": "21m00Tcm4TlvDq8ikWAM",
+          "description": "Klar, überzeugend, modernes Tempo"
+        },
+        "en": {
+          "name": "Adam",
+          "voice_id": "pNInz6obpgDQGcFmaJgB",
+          "description": "Warm, engaging, deep authoritative tone"
+        }
+      }
+    }
+  },
+  "theme": {
+    "name": "Cyber Modern Dark",
+    "colors": {
+      "background": "#0b0f19",
+      "surface": "rgba(22, 30, 46, 0.85)",
+      "surfaceBorder": "rgba(255, 255, 255, 0.12)",
+      "primary": "#38bdf8",
+      "primaryGlow": "rgba(56, 189, 248, 0.35)",
+      "danger": "#ef4444",
+      "dangerGlow": "rgba(239, 68, 68, 0.35)",
+      "warning": "#f59e0b",
+      "success": "#10b981",
+      "textMain": "#f8fafc",
+      "textMuted": "#94a3b8"
+    },
+    "fonts": {
+      "sans": "'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+      "mono": "'JetBrains Mono', 'Fira Code', monospace"
+    }
+  },
+  "scenes": [
+    {
+      "id": "scene-01-hook",
+      "startSec": 0,
+      "endSec": 5,
+      "nameDe": "Alarmierender Hook (Pling)",
+      "nameEn": "Alarming Hook (Ping)"
+    },
+    {
+      "id": "scene-02-problem",
+      "startSec": 5,
+      "endSec": 15,
+      "nameDe": "Problem: Genauso sieht Phishing aus",
+      "nameEn": "Problem: This is what Phishing looks like"
+    },
+    {
+      "id": "scene-03-points",
+      "startSec": 15,
+      "endSec": 45,
+      "nameDe": "Die 5 Warnzeichen (Checkliste)",
+      "nameEn": "The 5 Warning Signs (Checklist)"
+    },
+    {
+      "id": "scene-04-action",
+      "startSec": 45,
+      "endSec": 55,
+      "nameDe": "Handlung: Nicht klicken, melden!",
+      "nameEn": "Action: Do not click, report!"
+    },
+    {
+      "id": "scene-05-outro",
+      "startSec": 55,
+      "endSec": 60,
+      "nameDe": "Merksatz & CTA: Nicht anbeißen",
+      "nameEn": "Punchline & CTA: Don't take the bait"
+    }
+  ]
+}

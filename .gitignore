@@ -1,0 +1,8 @@
+node_modules/
+dist/
+snapshots/
+*.mp4
+*.webm
+.DS_Store
+.env
+.cache/

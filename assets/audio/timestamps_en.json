@@ -1,0 +1,103 @@
+{
+  "language": "en",
+  "duration": 59.8,
+  "tempo_applied": 1.15,
+  "segments": [
+    {
+      "id": 1,
+      "scene": "scene-01-hook",
+      "start": 0.0,
+      "end": 5.2,
+      "text": "Ping! An email from your bank: Your account will be locked, unless you click right here.",
+      "cues": {
+        "notification": 0.2,
+        "bank_alert": 1.8,
+        "button_blink": 3.9
+      }
+    },
+    {
+      "id": 2,
+      "scene": "scene-02-problem",
+      "start": 5.3,
+      "end": 14.8,
+      "text": "Wait a second. This is exactly what phishing looks like. Scammers want your credentials. But you can spot these fake emails by five telltale warning signs:",
+      "cues": {
+        "freeze_warning": 5.5,
+        "scam_badge": 8.0,
+        "checklist_intro": 12.0
+      }
+    },
+    {
+      "id": 3,
+      "scene": "scene-03-points",
+      "start": 14.9,
+      "end": 44.5,
+      "text": "5 Warning Signs of Phishing Emails",
+      "points": [
+        {
+          "number": 1,
+          "keyword": "Sender Address",
+          "start": 15.0,
+          "end": 20.8,
+          "text": "First: The sender. Hover your cursor over the sender name without clicking. Is it an unfamiliar address? Red flag!",
+          "cue": 15.1
+        },
+        {
+          "number": 2,
+          "keyword": "Generic Greeting & Typos",
+          "start": 20.9,
+          "end": 26.5,
+          "text": "Second: Generic greetings like “Dear Customer”, frequently packed with typos.",
+          "cue": 21.0
+        },
+        {
+          "number": 3,
+          "keyword": "Artificial Urgency",
+          "start": 26.6,
+          "end": 32.2,
+          "text": "Third: Artificial urgency and threats. They want you panicking so you click without thinking.",
+          "cue": 26.7
+        },
+        {
+          "number": 4,
+          "keyword": "Password & PIN Demands",
+          "start": 32.3,
+          "end": 38.0,
+          "text": "Fourth: Asking for your password, PIN, or two-factor code. Your real bank will never ask for this by email!",
+          "cue": 32.4
+        },
+        {
+          "number": 5,
+          "keyword": "Deceptive Links & Files",
+          "start": 38.1,
+          "end": 44.5,
+          "text": "Fifth: Deceptive links and attachments. Always verify where a link leads before clicking, and never open unexpected attachments.",
+          "cue": 38.2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "scene": "scene-04-action",
+      "start": 44.6,
+      "end": 54.5,
+      "text": "Still unsure? Do not click and do not reply! Reach out to the sender via an official channel, and report the message to your IT security team.",
+      "cues": {
+        "stop_shield": 45.0,
+        "verify_channel": 48.5,
+        "it_report": 51.5
+      }
+    },
+    {
+      "id": 5,
+      "scene": "scene-05-outro",
+      "start": 54.6,
+      "end": 59.8,
+      "text": "Remember: Pause before you click, don't take the bait!",
+      "cues": {
+        "punchline": 55.0,
+        "logo_reveal": 57.0
+      }
+    }
+  ]
+}

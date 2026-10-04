@@ -1,0 +1,37 @@
+{
+  "name": "template-video-creation",
+  "version": "1.0.0",
+  "description": "Template-Projekt zur automatisierten Erstellung von 1-Minute-Lernvideos auf Deutsch und Englisch mit Code-First Motion Graphics",
+  "main": "src/timeline.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npx -y hyperframes preview",
+    "preview": "npx -y hyperframes preview",
+    "check": "npx -y hyperframes check",
+    "lint": "npx -y hyperframes lint",
+    "snapshot": "npx -y hyperframes snapshot",
+    "pipeline:audio": "node scripts/pipeline_audio.js",
+    "render": "node scripts/render_pipeline.js",
+    "build": "node scripts/build_all.js",
+    "doctor": "npx -y hyperframes doctor"
+  },
+  "keywords": [
+    "motion-graphics",
+    "hyperframes",
+    "gsap",
+    "educational-videos",
+    "claude-code",
+    "elevenlabs",
+    "whisper",
+    "ffmpeg",
+    "1-minute-videos"
+  ],
+  "author": "krocon",
+  "license": "MIT",
+  "dependencies": {
+    "gsap": "^3.12.5"
+  },
+  "devDependencies": {
+    "hyperframes": "^0.8.121"
+  }
+}

@@ -1,0 +1,578 @@
+0.3s: KI ist mittlerweile extrem gut darin
+2.1s: geworden, Motion Graphics zu bauen. Also
+4.4s: animierte Grafiken, wie man sie aus
+6.4s: Werbespots, Erklärvideos oder auch
+8.4s: Social Media Clips kennt. Vor allem das
+10.6s: neue Modell von Anthropic, Cloud Opus 5.
+14.1s: Gut. Und ich will dir direkt mal ein
+15.6s: Beispiel zeigen. Und zwar habe ich ganz
+17.1s: beispielhaft eine neue Session hier bei
+18.6s: Cloud Code gestartet. Habe Opus 5.
+22.3s: Hohen Modus und habe dann hier diesen
+24.7s: Prompt eingegeben. Er soll quasi ein 15
+26.8s: sekunden langes Motion Graphics Video
+28.4s: machen, das zeigt, was für ein
+29.9s: unglaublich guter Motion Designer er
+31.8s: ist, so als würde er sich damit auch
+33.4s: irgendwo bewerben. Und dann hat er hier
+34.8s: erstmal eine Weile geackert und am Ende
+36.6s: kam dann folgendes Video raus.
+41.9s: [musik]
+53.1s: [musik]
+58.2s: Als ich das zum ersten Mal gesehen habe,
+59.6s: war ich ziemlich buff, denn das ist kein
+61.8s: Video aus einem Komodell wie CDE. Clud
+65.0s: hat das mit Code gebaut. Das heißt,
+67.0s: Cloud schreibt im Prinzip eine Website
+69.2s: im Hintergrund, auf der sich alles
+70.5s: bewegt und ein Programm nimmt diese
+72.2s: Webseite Bild für Bild auf und macht
+74.6s: daraus ein Video. Und das hat einen
+76.1s: großen Vorteil, denn jede Stelle in
+77.8s: diesem Video ist Code, den wir gemeinsam
+79.9s: mit Claud bearbeiten können. Wir können
+82.0s: also jede Farbe, jedes Timing und jedes
+84.5s: einzelne Bild so anpassen, wie wir es
+86.4s: haben wollen. Und wir müssen dafür nicht
+88.0s: wie bei einem KI Video mit einem neuen
+90.2s: Prompt hoffen, dass das nächste Ergebnis
+91.8s: besser wird und dabei unglaublich viel
+93.4s: Geld verschwenden. Und bei mir war das
+95.0s: jetzt hier einfach nur ein richtig
+96.0s: simpler Prompt, extrem kurz. Und deshalb
+98.3s: wollte ich in diesem Video mal testen,
+99.8s: wie weit man mit Opus 5. echten
+102.0s: Anwendungsfällen kommt, damit du auch
+103.9s: weißt, wo du so etwas selbst einsetzen
+105.7s: kannst und wie du Claud dafür überhaupt
+107.7s: prompten musst. Und dafür werden wir uns
+110.1s: auch drei Tests anschauen. Im ersten
+112.0s: Test gebe ich Cloud eine rohe Aufnahme
+114.0s: von mir und Cloud soll daraus einen
+115.9s: fertigen Short schneiden für YouTube,
+118.3s: Instagram, TikTok und so weiter. Wer
+120.5s: Shots kennt, der weiß, dass die voller
+122.5s: Effekte und Animationen stecken, weil
+124.3s: sie in den ersten Sekunden die
+125.6s: Aufmerksamkeit des Zuschauers halten
+127.6s: müssen. Da sieht man also ziemlich
+129.2s: schnell und ziemlich gut, ob Opos das
+131.1s: überhaupt hinbekommt. Im zweiten Test
+132.9s: geht es um Werbespots und zwar für
+134.7s: Produkte, die man nicht anfassen kann,
+136.8s: also irgendwelche Dienstleistungen oder
+138.6s: auch Softwarepukte. Denn für ein Getränk
+140.8s: oder einen Sneaker kannst du dir mit KI
+142.6s: Videomodellen inzwischen relativ leicht
+144.4s: einen Werbespot generieren lassen, aber
+146.6s: bei Softwarepukten oder Dienstleistungen
+148.6s: ist das nicht so einfach. Da gibt es
+150.3s: nichts, was man so richtig in die Kamera
+151.8s: halten kann und genau dafür eignen sich
+154.2s: aber Motion Graphics. Und im dritten
+156.0s: Test schauen wir uns an, wie gut Clord
+157.9s: Erklärvideos animiert, also
+159.8s: Lerneninhalte oder Schulungsvideos, bei
+162.2s: denen ein Thema verständlich rüberkommen
+164.2s: muss. Und vertrau mir, bleib bis zum
+166.3s: Ende dran, denn das hat mich wirklich
+167.7s: umgehauen. Falls also einer dieser drei
+169.6s: Themen interessiert, bleib unbedingt
+170.9s: dran, denn glaub mir, Cloud wird dir
+172.3s: eine Menge Zeit sparen können. Fangen
+173.9s: wir also direkt mit dem ersten Test an.
+175.5s: Ich möchte jetzt auch mehr mit Shortform
+177.1s: Content anfangen und deswegen habe ich
+178.4s: jetzt hier ein Video von mir
+179.3s: aufgenommen, wo ich einfach nur in die
+180.6s: Kamera spreche und ein bisschen was über
+182.5s: Cloud Code erkläre und ich zeig dir mal
+184.3s: kurz den Anfang dieser originalen
+185.9s: Aufnahme.
+189.4s: Wusstest du, dass Cloud Code zwei
+191.3s: Gedächtnisse hat?
+195.3s: Das erste ist die Cloud MD. Das ist
+197.1s: quasi die Bedienung genau. Also ich rede
+199.0s: hier wirklich einfach nur in die Kamera
+200.1s: rein. Ich verspreche mich auch
+201.2s: teilweise, mach Pausen und so weiter.
+203.4s: Und das Video soll Claud jetzt nehmen.
+205.3s: Er soll es dann erstmal schneiden, so
+206.7s: dass die ganzen Versprecher und die
+207.9s: Pausen raus sind und daraus soll er dann
+209.8s: ein Short für YouTube, Instagram und
+212.0s: sonstiges erstellen. Und dafür habe ich
+213.8s: jetzt hier in Cloud Code einfach einen
+215.3s: neuen Ordner erstellt, indem ich diese
+217.3s: Videodatei hinterlegt habe und habe
+219.3s: Cloud dann lediglich diesen Prompt hier
+220.9s: gegeben. Der ist jetzt ein bisschen
+222.0s: ausführlicher. Ich hinterlasse dir
+223.4s: übrigens alle Promps aus diesem Video in
+225.0s: meinem Download Hub in der
+226.2s: Videobeschreibung. Dort kannst du das
+228.1s: einfach kostenlos herunterladen und
+229.4s: musst das jetzt nicht screenshotten oder
+230.9s: irgendwie abtippen oder so. Ich würde
+232.4s: dir empfehlen, dir den Promp mal
+233.3s: durchzulesen, denn der folgt den
+234.9s: offiziellen Anthropic Best Practice
+236.8s: Guidelines, um Opus 5.5 zu prompten.
+239.4s: Denn diese Modelle solltest du nicht
+240.8s: mehr so prompten, dass du ihnen ha genau
+242.8s: erklärst, wie er was zu tun hat, sondern
+245.0s: du sollst ihm nur das Ziel geben und die
+246.9s: Referenzen, die er dann nutzen soll und
+248.4s: natürlich so ein bisschen was zu deinem
+250.0s: Geschmack, ne? Wie soll der Look sein?
+251.6s: Das ist ja individuell, das kann Claud
+253.4s: sich jetzt nicht selbst erschließen. Das
+255.0s: musst du ihm auch erzählen. Ich sage
+256.5s: ihm, er soll also ein Short erstellen
+257.8s: und soll dafür auch Hyper Frames nutzen.
+259.8s: Das ist quasi ein Open Source Framework,
+261.4s: das KI Agenten nutzen können, um Videos
+263.4s: zu generieren und zu bearbeiten und so
+265.2s: weiter. Und das ist einfach noch mal
+266.9s: zusätzlich ein nice to have, weil sie
+269.6s: einige Funktionen mitbringen und auch
+271.5s: Templates und Best Practices, die der
+273.0s: Kagent dann nutzen kann, damit er sich
+275.4s: nicht alles selbst erschließen muss.
+276.9s: Sound und Musik muss Cloud selbst
+278.4s: erzeugen. Wie gesagt, er muss das Video
+280.3s: erstmal bearbeiten, dass die ganzen
+282.1s: Versprecher raus sind. Zum Look, ne? Da
+284.5s: erkläre ich so ein bisschen, was ich
+285.5s: haben möchte. Ich möchte verschiedene
+287.1s: Kamera Layouts haben. Zwischen den
+288.9s: Layouts soll hart geschnitten werden,
+290.4s: damit der Fokus einfach auf dem Inhalt
+292.3s: ist und nicht auf den reihen
+293.6s: Animationen. Die Grafiken müssen immer
+295.5s: genau das zeigen, worüber ich gerade
+297.1s: rede und er soll zu allem, was ich sagt,
+299.1s: auch das Internet recherchieren und sich
+300.7s: dann passende Logos, Screenshots aus der
+303.0s: Dokumentation oder von Webseiten holen,
+305.8s: die er dann mit in diesem Short einbaut.
+307.9s: Das heiß, er kann dann da z.B. für
+309.0s: bestimmte Website auch direkt markieren
+311.0s: oder bestimmte Dokumentationstexte. Dann
+313.0s: sage ich ihm natürlich auch was zu
+314.1s: meiner Zielgruppe, damit er auch weiß,
+315.6s: in was für einem Stil er die Animationen
+317.8s: machen soll. Ich erkläre ihm, wie die
+319.3s: Untertitel aussehen sollen, ne? Also
+321.0s: überall, wo es darum geht, den
+322.6s: individuellen Geschmack mit
+323.8s: reinzubringen, solltest du ihm das
+325.2s: natürlich erklären. Wie gesagt, lese den
+326.7s: Prompt gerne mal genauer durch, wenn es
+328.1s: dich interessiert. Das war der gesamte
+329.7s: Prompt, den ich gegeben habe. Ich hatte
+331.0s: hier Opus 5. Lediglich auf hohem
+333.7s: Aufwand, also nicht mal auf extra high
+335.4s: oder Maximum. Und dann hat er hier
+336.8s: erstmal ganz viel gearbeitet und nach
+339.0s: ca. 15 bis 20 Minuten kam dann auch das
+341.1s: Ergebnis. Er hat hier sogar jetzt
+343.3s: Screenshots gemacht, ne, um seine
+345.0s: Frames, die er generiert hat, zu
+346.1s: überprüfen. Und hier unten sehen wir
+347.6s: jetzt den Output. Wusstest du, dass
+349.5s: Cloud Code zwei Gedächtnisse hat? Das
+351.9s: erste ist die Cloud MD. Das ist quasi
+353.8s: die Bedienungsanleitung für dein
+355.2s: Projekt, also wie es aufgebaut ist und
+357.4s: welche Regeln gelten. Das heißt, die
+359.6s: schreibst du selbst oder Cloud schaut
+361.7s: sich dein Projekt an und macht dir einen
+363.6s: Entwurf. Das zweite ist das Auto Memory.
+365.9s: Da schreibt Claud selbst mit. Das heißt,
+368.0s: Claud schaut sich an, wie du arbeitest,
+369.8s: was dir wichtig ist, wie du ihn
+371.2s: korrigiert hast und speichert sich diese
+373.2s: Informationen. Die Cloud MDI kannst du
+375.4s: dabei auch mit anderen Leuten teilen,
+377.3s: aber das Auto Memory nicht. Das läuft
+379.2s: nur auf deinem PC. Und wenn du Cloud
+381.0s: Code sagst, er soll sich etwas merken,
+382.7s: dann landet das im Auto Memory. Das
+385.0s: heißt, wenn es für das ganze Team gelten
+386.8s: soll, was er sich merken soll, oder du
+388.9s: auf verschiedenen Rechnern dann mit dem
+390.6s: Projekt arbeitest, dann solltest du
+392.2s: diese Informationen in die CloudmDatei
+394.3s: schreiben. Und das ist wohl gemerkt das
+396.4s: erste Ergebnis nach unserem schon
+398.4s: detaillierten Promt, aber ich habe dann
+400.0s: nichts nachgebessert und wenn das schon
+402.3s: der erste Entwurf ist, dann kannst du
+403.8s: dir vorstellen, wo man nach ein paar
+405.4s: Runden Iteration landet, denn ganz so
+407.9s: happy war ich damit noch nicht, vor
+409.3s: allem mit dem Ton. Die Musik und die
+411.6s: Soundeffekte hat Cloud nämlich selbst
+413.2s: erzeugt, also im Prinzip aus Code
+415.0s: berechnet und das hört man auch. Die
+416.8s: klingen so ein bisschen künstlich.
+418.6s: Deshalb habe ich mir hier bei Pix Bay
+420.1s: z.B. lizenzfreie Musik und ein paar
+422.3s: Soundeffekte heruntergeladen und Cloud
+424.3s: gesagt, dass es den Short damit neu
+426.5s: bauen soll. Außerdem wollte ich dann
+428.0s: noch so ein bisschen die Schrift
+429.0s: anpassen und auch die Grafiken, auch
+430.4s: wenn er schon ziemlich gut ist, aber ich
+431.9s: wollte einfach noch mehr meinen
+433.1s: Geschmack reinbringen und habe jetzt
+434.5s: noch mal ein bisschen hin und her
+435.5s: gepromptet und das wird bei dir
+436.8s: natürlich auch so sein, denn Geschmäcker
+438.4s: sind individuell und vielleicht willst
+440.1s: du etwas ganz anderes haben und da musst
+442.1s: du clot dann aber auch einfach nur
+443.2s: sagen, was dich stört, was du gerne
+444.7s: hättest und in ein paar Runden hast du
+446.9s: dann schon ein ziemlich gutes Ergebnis.
+448.6s: Und hier ist jetzt die finale Version,
+450.0s: die ich so auch auf Social Media
+451.2s: hochladen werde. Wusstest du, dass Cloud
+453.4s: Code zwei Gedächtnisse hat? Das erste
+455.5s: ist die Cloud MD. Das ist quasi die
+457.3s: Bedienungsanleitung für dein Projekt,
+459.1s: also wie es aufgebaut ist und welche
+461.1s: Regeln gelten. Das heißt, die schreibst
+463.4s: du selbst oder Clud schaut sich dein
+465.4s: Projekt an und macht dir einen Entwurf.
+467.6s: Das zweite ist das Auto Memory. Da
+469.2s: schreibt Claud selbst mit. Das heißt,
+471.2s: Claud schaut sich an, wie du arbeitest,
+473.0s: was dir wichtig ist, wie du ihn
+474.4s: korrigiert hast und speichert sich diese
+476.4s: Informationen. Die Cloud MDatei kannst
+478.4s: du dabei auch mit anderen Leuten teilen,
+480.4s: aber das Auto Memory nicht. Das läuft
+482.3s: nur auf deinem PC. Und wenn du Cloud
+484.0s: Code sagst, er soll sich etwas merken,
+485.7s: dann landet das im Auto Memory. Das
+487.9s: heißt, wenn es für das ganze Team gelten
+489.8s: soll, was er sich merken soll, oder du
+491.8s: auf verschiedenen Rechnern dann mit dem
+493.5s: Projekt arbeitest, dann solltest du
+495.1s: diese Informationen in die Cloudmdatei
+497.3s: schreiben. Wenn du also Shortform oder
+499.0s: auch Longform Content machen willst und
+500.6s: dir die Videos von Cloud schneiden
+502.0s: möchtest, dann solltest du das unbedingt
+504.0s: machen, denn Cloud ist sehr gut darin
+505.6s: geworden. Das wird dir eine Menge Zeit,
+507.1s: aber auch eben Geld sparen für einen
+508.7s: Cutter. Also probier es gerne mal aus.
+511.1s: Kommen wir zum zweiten Test und zwar
+512.6s: Werbespots. Und wir wissen ja bereits,
+514.8s: dass es mit KI Videomodellen ziemlich
+516.8s: einfach geworden ist, solche coolen
+518.5s: Werbespots für Produkte zu erstellen,
+520.5s: wie z.B. hier irgend so ein Getränk oder
+522.8s: irgendeine Schokolade, was auch immer.
+524.7s: Das funktioniert schon sehr gut. Dazu
+526.0s: habe ich auch ein eigenes Video gemacht,
+527.4s: das verlinke ich dir auch oben. Wenn du
+529.1s: das Ganze [räuspern] aber bei Software
+530.3s: Produkten oder Dienstleistungen
+531.5s: probierst, dann wirst du merken, dass
+532.9s: das Ganze nicht so gut funktioniert,
+534.7s: weil es schwierig für die KI
+535.8s: Videomodelle ist, sowas überhaupt
+537.2s: abzubilden. Mit Motion Graphics kannst
+539.1s: du so ein Produkt oder eine
+540.2s: Dienstleistung aber trotzdem greifbar
+541.8s: machen, wenn du quasi nicht das
+543.9s: eigentliche Produkt selbst zeigst,
+545.6s: sondern was es für den Kunden tut. Und
+547.5s: ich zeig dir hier erstmal ein richtig
+548.6s: cooles Beispiel, dass ich auf X gefunden
+550.2s: habe.
+553.5s: [musik]
+559.4s: [musik]
+565.8s: Finde ich mega stark. Das hat Opus 5.
+568.6s: Und ich wollte natürlich jetzt testen,
+570.2s: wie das Ganze bei echten Produkten
+572.2s: funktioniert. Und ich habe das Ganze
+573.6s: zweimal ausprobiert. Einmal mit einem
+575.3s: sehr, sehr einfachen, simplen Prompt und
+577.3s: mit einem ausführlichen Prompt. Und für
+579.0s: den ersten Test habe ich jetzt mal die
+580.2s: Plattform N8N genommen. Das ist eine
+581.8s: sehr gute Automatisierungsplattform, die
+583.3s: ich häufig nutze und die das soll jetzt
+585.5s: kein Werbevideo sein, die sponser mich
+586.9s: auch nicht, aber ich wollte jetzt mal
+588.2s: schauen, wie gut es Cloud hinbekommt
+589.5s: anhand deren Seite einfach so ein Video
+592.4s: zu erstellen. Ich habe dann quasi im
+593.8s: selben Chat, bei dem Cloud dieses Video
+595.6s: hier vom Anfang generiert hat, habe ich
+597.4s: dann einfach folgenden Prom geschrieben,
+598.9s: können wir für folgendes Softwareprukt
+600.4s: ein paar solche Videos machen und habe
+602.2s: ihm dann hier die Website gegeben. Dann
+603.7s: hat mir [räuspern] Claud ein paar Fragen
+604.7s: zur Sprache und zum Format gestellt und
+606.8s: dann wieder erstmal ganz viel gearbeitet
+608.5s: und am Ende kamen dann diese drei
+610.4s: Werbespots hier raus. [musik]
+620.3s: [musik]
+641.7s: Und da war ich natürlich auch wieder
+642.8s: total überrascht, weil das ja wieder
+644.1s: wirklich so ein minimaler Prompt war und
+646.1s: das zeigt einfach, wie viel Mühe sich
+647.8s: dieses Modell mittlerweile geben kann.
+649.4s: Und natürlich wollte ich dann auch noch
+650.5s: testen, wie Clud bei einem sehr langen
+652.2s: Prompt performt. Und deswegen habe ich
+654.0s: ihm jetzt folgenden Prompt hier gegeben
+655.8s: und zwar auch für ein anderes Produkt,
+657.3s: nämlich Excalid Draw. Das ist quasi
+659.2s: dieses Whiteboard Tool, dass ich hier
+660.7s: gerne in meinen Videos nutze, um Dinge
+662.1s: zu erklären und ich finde, das ist ein
+663.4s: super Tool, das kannst du auch
+664.5s: kostenfrei nutzen, aber die haben auch
+666.5s: eine bezahlte Version, bei der du mit
+668.4s: deinem Team dann zusammenarbeiten
+669.7s: kannst, z.B. und Cloud sollte sich dafür
+671.5s: natürlich erstmal wieder anschauen.
+672.8s: Okay, was macht Excalyroy überhaupt? Wie
+674.8s: sieht deren Logo aus? Wie sieht deren
+677.0s: Design aus, ne, deren Branding? Das
+679.5s: alles soll natürlich übernommen werden
+681.1s: und dann soll daraus ein Werbespot
+682.9s: entstehen. Und hier habe ich auch wieder
+684.2s: nur gesagt, er soll ein 30s sekündiges
+686.0s: Video erstellen mit Hyperframes. Der
+687.9s: Spot lebt in Excalidraws eigener Welt,
+689.8s: ihre Zeichenfläche, ihre
+691.0s: handgezeichneten Striche, ihre Schrift,
+693.0s: Farben, Oberfläche und so weiter. Und
+694.9s: hier kommt jetzt noch ein wichtiger Teil
+696.1s: und zwar möchte ich für diesen Werbespot
+697.6s: auch eine Stimme nutzen von 11 Labs. Ich
+700.0s: habe mir hier bei 11 Labs eine coole
+701.4s: Stimme ausgesucht, die dann das ganze
+703.1s: Video sprechen soll. Neuer Look, neue
+705.6s: Vibes. Entdecke die Styles, die zu dir
+708.0s: passen und mache jeden Moment zu deinem
+710.1s: Statement.
+710.9s: Und ich habe ihm hier auch wieder
+711.9s: Hintergrundmusik von einer Seite wie
+713.6s: Pixel Bay gegeben, die dann ganz leise
+715.4s: im Hintergrund laufen soll. Und damit du
+717.1s: auch siehst, dass das Ganze wirklich nur
+718.2s: ein prompt war, ich scroll jetzt hier
+719.6s: runter und hier sieht man dann sogar so
+721.8s: ein paar Screenshots, ne? Und da sehen
+724.7s: wir auch in welche Richtung das schon
+725.9s: geht. Das Ganze hat ziemlich lange
+727.8s: gedauert. Ich glaube ca. 40 Minuten. Und
+730.5s: hier sehen wir jetzt das Endergebnis.
+732.6s: Eine Idee im Kopf? Sieht niemand.
+736.4s: Mit Excalid Draw Plus wird sie in
+738.3s: Sekunden zur Skizze und dein Team
+740.8s: zeichnet sofort mit live im gemeinsamen
+743.8s: Workspace. Sprecht im Voicechat,
+746.3s: kommentiert direkt an der Skizze. Lasst
+748.8s: die KI Diagramme bauen und präsentiert
+751.7s: direkt vom Canvas. Excalid Draw Plus.
+755.3s: Mach deine Idee sichtbar.
+757.2s: [musik]
+757.2s: Jetzt 14 Tage kostenlos testen.
+762.0s: Ich find es absolut gelungen. Ich war
+763.7s: total überrascht, wie gut das
+765.0s: funktioniert und auch wie gut die Stimme
+766.4s: ist. Das funktioniert jetzt mit der
+767.5s: neuen 11 Labs V4 Engine. Die klingt noch
+770.9s: mal besonders menschlich, aber auch hier
+772.6s: die ganzen Animationen und was er hier
+774.7s: immer einblendet, das hat so gut
+776.3s: gepasst. Also hat mich absolut
+777.9s: überzeugt, weil ja vor allem auch das
+779.4s: ganze Branding, also das Logo, die
+781.6s: Schriftart, die Farben, all wurde ganz
+784.3s: klar so beibehalten und das ist
+786.0s: natürlich extrem wichtig und sowas
+787.6s: funktioniert halt bei KI Videomodellen,
+789.8s: die jetzt einfach ein Video generieren,
+791.1s: nicht so gut. Und bevor wir jetzt mit
+792.7s: dem dritten Test weitermachen, ein
+794.1s: kurzes Wort zum Sponsor des heutigen
+795.7s: Videos, nämlich User Centric. Und rate
+798.1s: mal, wer diese Integration jetzt für
+799.7s: mich schneiden wird. Eine Website baust
+801.5s: du heute mit Cloud Code in wenigen
+803.0s: Minuten. Sie muss aber auch
+804.3s: datchutzrechtlich passen und das fängt
+806.2s: bei den Cookies an. Einen Cookiebner
+808.6s: baut ihr die KI sofort. Der ist aber
+810.3s: zunächst nur eine Fläche mit Text und
+812.0s: Knöpfen und was ihn eigentlich nützlich
+814.0s: macht, steckt darunter. Cookies und
+816.1s: Tracking müssen nämlich blockiert
+817.5s: bleiben, bis jemand zustimmt. Jede
+819.6s: Entscheidung muss dabei auch nachweisbar
+821.5s: gespeichert werden und Besucher müssen
+823.6s: ihre Auswahl später ändern können.
+825.8s: Google und andere Werbeplattformen
+827.3s: müssen auch wissen, wie jemand
+828.6s: entschieden hat und je nach Land gelten
+831.0s: andere Regeln, die sich ständig ändern.
+833.3s: Das Ganze selbst zu bauen und auch
+834.8s: aktuell zu halten ist ein Projekt für
+836.3s: sich, aber das musst du gar nicht
+837.7s: machen. Du kannst auch einfach Cookie
+839.1s: nutzen, eine Content Management
+840.8s: Plattform. Du setzt ein kleines Stück
+842.4s: Code in deine Website ein und Cookiebot
+844.3s: erkennt die Cookies automatisch,
+846.2s: blockiert sie bis zur Einwilligung und
+847.9s: passt sich an, wenn sich Gesetze ändern.
+850.2s: Es deckt unter anderem DSGVO und CCPA ab
+853.1s: und ist von Google für den Content Mode
+855.1s: zertifiziert. Für kleine Websites ist
+857.3s: Cookie kostenlos. Größere Staten bei 7 €
+859.8s: im Monat. Testen kannst du das Ganze 14
+862.0s: Tage lang kostenfrei mit allen
+863.4s: Premiumfunktionen. Den Link dazu findest
+865.4s: du in der Videobeschreibung.
+866.8s: Vollständige Compliance hängt dann mehr
+868.2s: als einem Tool, aber der Teil mit den
+869.8s: Cookies ist damit sehr gut abgedeckt.
+871.9s: Kommen wir zum dritten Test und hier
+873.2s: geht es jetzt um Erklärvideos. Die
+875.2s: brauchst du nämlich überall, wo jemand
+876.6s: etwas lernen soll, also in Onlinekursen,
+878.8s: im Unterricht oder in Schulungen für
+880.7s: Mitarbeitende. Und ich habe Cloud dafür
+882.7s: jetzt ein Thema gegeben, das in fast
+884.5s: jeder Firma irgendwann auf dem Plan
+886.3s: steht und zwar wie man Fishing Mails
+888.6s: erkennt. Also eine gefälschte Mail, die
+890.6s: dich dazu bringen soll, auf einen Link
+892.1s: zu klicken oder dein Passwort
+893.5s: einzugeben. Dafür habe ich jetzt
+894.9s: folgenden Prompt hier genutzt und der
+896.2s: ist etwas kürzer als die vorherigen. Ich
+898.4s: sage hier oben auch wieder einfach nur,
+899.6s: was ich haben möchte. Dann sage ich ihm
+901.1s: natürlich was zu dem Look. Das Ganze
+902.6s: soll so ein bisschen verspielter sein
+904.0s: und so illustriert mit 2D Figuren, wie
+906.4s: man es halt aus guten Erklärvideos
+907.8s: kennt. Und diesmal soll er alle Figuren
+909.6s: und Illustrationen selber zeichnen, also
+911.6s: nicht irgendwo was aus dem Internet
+913.2s: holen. Ich sag ihm aber trotzdem, er
+914.8s: soll im Internet recherchieren, was die
+916.5s: BSI und die Verbraucherzentrale
+918.5s: empfiehlt bei solchen Mails und was so
+920.4s: die Warnzeichen sind. Also ne, er soll
+922.1s: sich wieder an offiziellen Quellen
+923.4s: halten. Und ich gebe ihm auch wieder
+924.9s: eine Sprecherstimme von 11 Labs mit,
+926.9s: nämlich den Alex und der hört sich so
+928.5s: an. Könnten Sie mir bitte ein paar
+930.4s: mögliche Zeitfenster vorschlagen, an
+932.4s: denen ein Techniker vorbeikommen könnte?
+934.4s: Und diesmal soll er die Musik und
+935.6s: Soundeffekte auch wieder selber
+936.9s: erstellen. Ich gebe ihm hier also nichts
+938.3s: mit. Ich habe ihn dafür jetzt hier auf
+940.0s: extra hohen Aufwand gestellt und das
+941.9s: Ganze hat wirklich lange gedauert, also
+943.6s: insgesamt eine Stunde, was schon
+945.8s: ziemlich krass ist, aber glaub mir, das
+948.0s: Ergebnis ist echt gut geworden. Das geht
+949.7s: jetzt auch eine Minute lang.
+951.6s: Pling. Eine Mail von deiner Bank. Dein
+954.3s: Konto wird gesperrt, außer du klickst
+956.4s: sofort hier.
+958.1s: Moment mal. Genauso sieht Fishing aus.
+961.4s: Damit wollen Betrüger an deine Daten.
+963.7s: Aber du erkennst solche Mails an ein
+965.6s: paar typischen Zeichen. Erstens, der
+968.4s: Absender. Fahr mit der Maus über den
+970.6s: Namen ohne zu klicken. Steckt eine
+972.6s: fremde Adresse dahinter? Vorsicht.
+975.2s: Zweitens, eine allgemeine Anrede wie
+977.8s: sehr geehrter Kunde. Oft mit Fehlern im
+980.1s: Text. Drittens, Zeitdruck und Drohungen.
+983.3s: Der Druck soll dich zum schnellen
+984.6s: Klicken bringen. Viertens, du sollst
+987.0s: Passwort, PIN oder Tan eingeben. Deine
+989.6s: Bank fragt so etwas nie per Mail ab.
+992.0s: Fünftens, Links und Anhänge. Prüf vor
+994.8s: dem Klick, wohin ein Link wirklich
+996.4s: führt. Anhänge aus unerwarteten Mails
+998.9s: öffnest du nicht. Du bist unsicher? Dann
+1002.0s: nicht klicken und nicht antworten. Frag
+1004.4s: beim Absender nach über einen Weg, den
+1006.3s: du kennst und melde die Mail deiner
+1008.5s: IT-Abteilung. Damit liegst du genau
+1010.6s: richtig. Also kurz prüfen, nicht
+1013.9s: anbeißen.
+1016.5s: Ich war ehrlich gesagt nach diesem Video
+1017.8s: ziemlich sprachlos, weil wie gut ist das
+1019.8s: bitte? Also KI ist auf jeden Fall nicht
+1021.7s: mehr nur dazu da, um Texte zu
+1022.9s: generieren, das kann man sagen. Und das
+1024.4s: ist ja alles Code. Also ich kann jetzt
+1025.6s: z.B. hier sagen, nee, da soll was anders
+1027.3s: passieren und dann macht er hier ein
+1028.6s: bisschen was und ändert es. Und ich muss
+1030.1s: dafür jetzt nicht extra zahlen. Das
+1031.5s: kostet mich nur ein paar Tokens hier von
+1032.9s: meinem Kontingent. Und ich sehe hier
+1034.3s: wirklich extrem viel Potenzial und sehr
+1036.2s: viele Anwendungsfälle und man muss eben
+1038.2s: nicht mehr unglaublich viel Geld
+1039.5s: ausgeben, um solche Schulungsinhalte zu
+1042.0s: erstellen. Das waren auch schon die drei
+1043.5s: Tests und mein Eindruck ist, dass Cloud
+1045.6s: mit Opus 5. Hyperframes bei allen drei
+1048.8s: Anwendungsfällen inzwischen wirklich
+1050.3s: sehr gute Ergebnisse liefert. Also damit
+1052.4s: kann man wirklich arbeiten. Falls du
+1054.0s: noch mehr darüber lernen möchtest, wie
+1055.2s: du mit Cloud solche US Casases
+1056.7s: realisieren kannst, um auch wirklich
+1058.2s: gute Ergebnisse zu bekommen, dann schau
+1060.0s: jederzeit auch gerne in meine Community
+1061.4s: vorbei. Hier behandeln wir das Thema
+1062.8s: sehr intensiv. Ich habe hier eine Cloud
+1064.3s: Code Masterclass erstellt, wo ich das
+1065.8s: Thema von A bis Z gemeinsam mit dir
+1067.4s: durchgehe, damit du am Ende wirklich
+1068.8s: weißt, wie du Cloud Code richtig nutzt
+1070.8s: und hier auch einen Kurs erstellt zum
+1072.6s: Thema KI Betriebssystem. Denn wenn du
+1074.4s: mit so einem System wie Cloud Code
+1075.6s: arbeitest, dann ist das ein absoluter
+1077.5s: Gamechanger und der maximale
+1079.1s: Produktivitätsboost für dich. Das heißt,
+1081.0s: falls dich das Thema interessiert und du
+1082.2s: dich auch mit anderen Gleichgesinnten
+1083.6s: austauschen möchtest, schau jederzeit
+1085.0s: gerne vorbei. Ich freue mich auf dich.
+1086.7s: Das war's auch schon mit dem Video. Ich
+1087.9s: hinterlasse dir, wie gesagt, alle Proms
+1089.8s: in der Videobeschreibung und lass mich
+1091.6s: gerne in den Kommentaren wissen, welche
+1093.2s: der Beispiele dich wirklich überrascht
+1094.5s: haben und wo du vielleicht sogar noch
+1096.6s: Anwendungspotenziale siehst oder auch
+1098.4s: was man vielleicht noch besser machen
+1099.6s: kann. Ich bedanke mich fürs Zuschauen
+1100.9s: und würde sagen, wir sehen uns beim
+1101.7s: nächsten Video wieder. Bis dann.

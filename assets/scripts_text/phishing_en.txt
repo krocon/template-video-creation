@@ -1,0 +1,10 @@
+Ping! An email from your bank: Your account will be locked, unless you click right here.
+Wait a second. This is exactly what phishing looks like. Scammers want your credentials.
+But you can spot these fake emails by five telltale warning signs:
+First: The sender. Hover your cursor over the sender name without clicking. Is it an unfamiliar address? Red flag!
+Second: Generic greetings like “Dear Customer”, frequently packed with typos.
+Third: Artificial urgency and threats. They want you panicking so you click without thinking.
+Fourth: Asking for your password, PIN, or two-factor code. Your real bank will never ask for this by email!
+Fifth: Deceptive links and attachments. Always verify where a link leads before clicking, and never open unexpected attachments.
+Still unsure? Do not click and do not reply! Reach out to the sender via an official channel, and report the message to your IT security team.
+Remember: Pause before you click, don't take the bait!
